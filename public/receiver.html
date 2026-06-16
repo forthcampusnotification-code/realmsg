@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RealMsg · Receiver</title>
+<script src="/socket.io/socket.io.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+/* ── Variables ────────────────────────────────────────────────── */
+:root {
+  --bg:    #05050e;
+  --s1:    #09091a;
+  --s2:    #0d0d1f;
+  --bdr:   #141428;
+  --bdr2:  #1c1c35;
+  --acc:   #4d7cfe;
+  --acc-g: rgba(77,124,254,.16);
+  --grn:   #00e0a0;
+  --grn-g: rgba(0,224,160,.14);
+  --red:   #ff4060;
+  --txt:   #e2e6ff;
+  --sub:   #484870;
+  --dim:   #252545;
+  --mono:  'IBM Plex Mono', monospace;
+  --head:  'Syne', sans-serif;
+  --fsize: 28px;           /* default message font size */
+}
+
+/* Light theme overrides */
+body.light {
+  --bg:  #f0f1ff;
+  --s1:  #ffffff;
+  --s2:  #f5f5ff;
+  --bdr: #d8daff;
+  --bdr2:#c8caee;
+  --txt: #08081e;
+  --sub: #8080b0;
+  --dim: #c0c2e8;
+}
+
+/* ── Reset ────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; }
+body {
+  background: var(--bg);
+  color: var(--txt);
+  font-family: var(--mono);
+  display: flex;
+  flex-direction: column;
+  /* FOCUS SAFETY: never steals focus from other windows */
+  user-select: none;
+  -webkit-user-select: none;
+  transition: background .2s, color .2s;
+}
+
+/* Subtle dot-grid background */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: radial-gradient(circle, rgba(77,124,254,.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+/* ── Toolbar ──────────────────────────────────────────────────── */
+.tb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  background: var(--s1);
+  border-bottom: 1px solid var(--bdr2);
+  padding: 8px 16px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+.tb-logo {
+  font-family: var(--head);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.tb-logo .a { color: var(--acc); }
+.tb-logo .b { color: var(--grn); }
+.tb-room {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--acc);
+  letter-spacing: 2px;
+  background: var(--bg);
+  border: 1px solid var(--bdr2);
+  border-radius: 99px;
+  padding: 3px 12px;
+}
+.cdot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--dim);
+  transition: all .3s;
+  flex-shrink: 0;
+}
+.cdot.on  { background: var(--grn); box-shadow: 0 0 0 3px var(--grn-g); }
+.cdot.off { background: var(--red); animation: blink 1.2s infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+.clbl { font-size: 10px; color: var(--sub); letter-spacing: .4px; }
+.tb-sp { flex: 1; }
+.tbtn {
+  background: var(--s2);
+  border: 1px solid var(--bdr2);
+  border-radius: 7px;
+  color: var(--sub);
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 5px 10px;
+  transition: all .15s;
+  white-space: nowrap;
+}
+.tbtn:hover { border-color: var(--acc); color: var(--acc); }
+.tbtn.sound-on  { border-color: var(--grn); color: var(--grn); }
+
+/* ── Room join overlay ────────────────────────────────────────── */
+#ov {
+  position: fixed; inset: 0;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  z-index: 100;
+  padding: 24px;
+}
+.ov-logo {
+  font-family: var(--head);
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+.ov-logo .a { color: var(--acc); }
+.ov-logo .b { color: var(--grn); }
+.ov-sub {
+  font-size: 13px;
+  color: var(--sub);
+  text-align: center;
+  line-height: 1.7;
+  max-width: 280px;
+}
+.ov-in {
+  background: var(--s1);
+  border: 1px solid var(--bdr2);
+  border-radius: 11px;
+  color: var(--txt);
+  font-family: var(--mono);
+  font-size: 18px;
+  padding: 13px 20px;
+  width: 100%;
+  max-width: 270px;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+  text-align: center;
+  letter-spacing: 3px;
+  user-select: auto;
+  -webkit-user-select: auto;
+}
+.ov-in:focus { border-color: var(--acc); box-shadow: 0 0 0 3px var(--acc-g); }
+.ov-in::placeholder { letter-spacing: 0; color: var(--dim); font-size: 13px; }
+.ov-btn {
+  background: var(--acc);
+  border: none;
+  border-radius: 11px;
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--head);
+  font-size: 15px;
+  font-weight: 800;
+  padding: 13px 44px;
+  box-shadow: 0 6px 20px var(--acc-g);
+  transition: all .15s;
+}
+.ov-btn:hover { filter: brightness(1.1); }
+.ov-err { font-size: 12px; color: var(--red); min-height: 16px; }
+
+/* ── Responsive font scaling ──────────────────────────────────── */
+#main {
+  flex: 1;
+  display: none;
+  flex-direction: column;
+  padding: 20px 24px 20px;
+  min-height: 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  /* Clicking the message area itself does nothing — no focus risk */
+  pointer-events: none;
+}
+/* Re-enable pointer events only for the toolbar buttons and copy btn */
+.tb, .tbtn, #lcopy { pointer-events: auto; }
+
+/* ── Message display box ──────────────────────────────────────── */
+#msg-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+/* Empty state */
+#empty {
+  font-size: 16px;
+  color: var(--sub);
+  text-align: center;
+  font-style: italic;
+  letter-spacing: .3px;
+}
+
+/* Main message card */
+#lbox {
+  position: relative;
+  width: 100%;
+  background: var(--s1);
+  border: 2px solid var(--acc);
+  border-radius: 18px;
+  padding: 44px 44px 44px 44px;
+  box-shadow:
+    0 0 0 1px rgba(77,124,254,.08),
+    0 24px 60px rgba(0,0,0,.45);
+  display: none;
+}
+
+/* Flash animation on new message */
+#lbox.pop {
+  animation: pop .32s cubic-bezier(.15, 1.5, .4, 1) forwards;
+}
+@keyframes pop {
+  0%   { border-color: var(--grn); box-shadow: 0 0 0 0 var(--grn-g), 0 24px 60px rgba(0,0,0,.45); }
+  45%  { border-color: var(--grn); box-shadow: 0 0 0 14px rgba(0,224,160,0), 0 24px 60px rgba(0,0,0,.45); }
+  100% { border-color: var(--acc); box-shadow: 0 0 0 1px rgba(77,124,254,.08), 0 24px 60px rgba(0,0,0,.45); }
+}
+
+/* Timestamp top-left */
+#lts {
+  position: absolute;
+  top: 13px; left: 18px;
+  font-size: 11px;
+  color: var(--sub);
+  letter-spacing: .3px;
+  font-family: var(--mono);
+}
+
+/* Copy button top-right */
+#lcopy {
+  position: absolute;
+  top: 10px; right: 14px;
+  background: var(--bg);
+  border: 1px solid var(--bdr2);
+  border-radius: 6px;
+  color: var(--sub);
+  cursor: pointer;
+  font-size: 11px;
+  padding: 3px 10px;
+  font-family: var(--mono);
+  transition: all .15s;
+  user-select: none;
+}
+#lcopy:hover { border-color: var(--grn); color: var(--grn); }
+
+/* ── THE MESSAGE TEXT ─────────────────────────────────────────── *
+ * Key requirements:
+ *   - Left aligned (not centered)
+ *   - white-space: pre-wrap preserves line breaks, bullets, lists
+ *   - Large readable font
+ */
+#ltxt {
+  font-size: var(--fsize);
+  font-family: var(--head);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: -.3px;
+  color: var(--txt);
+
+  /* LEFT ALIGN — not centered */
+  text-align: left;
+
+  /* PRESERVE FORMATTING: line breaks, bullets, numbered lists */
+  white-space: pre-wrap;
+  word-break: break-word;
+
+  /* Ensure long content scrolls within the box */
+  max-height: calc(100vh - 240px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bdr2) transparent;
+}
+#ltxt::-webkit-scrollbar { width: 4px; }
+#ltxt::-webkit-scrollbar-track { background: transparent; }
+#ltxt::-webkit-scrollbar-thumb { background: var(--bdr2); border-radius: 4px; }
+
+/* ── Signal indicator circle ──────────────────────────────────── */
+#signal-wrap {
+  position: fixed;
+  top: 60px;           /* below toolbar */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: none;       /* hidden until a signal arrives */
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+}
+#signal-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0 transparent;
+  transition: background .3s, box-shadow .3s;
+}
+#signal-circle.go {
+  background: radial-gradient(circle at 35% 35%, #69ff9c, #00c853);
+  box-shadow:
+    0 0 0 10px rgba(0,200,83,.18),
+    0 0 40px rgba(0,200,83,.45),
+    0 0 80px rgba(0,200,83,.2);
+  animation: pulse-go 1.8s infinite;
+}
+#signal-circle.stop {
+  background: radial-gradient(circle at 35% 35%, #ff6b80, #d50000);
+  box-shadow:
+    0 0 0 10px rgba(213,0,0,.18),
+    0 0 40px rgba(213,0,0,.45),
+    0 0 80px rgba(213,0,0,.2);
+  animation: pulse-stop 1.2s infinite;
+}
+@keyframes pulse-go {
+  0%,100% { box-shadow: 0 0 0 0 rgba(0,200,83,.5), 0 0 40px rgba(0,200,83,.45); }
+  50%      { box-shadow: 0 0 0 18px rgba(0,200,83,0), 0 0 60px rgba(0,200,83,.6); }
+}
+@keyframes pulse-stop {
+  0%,100% { box-shadow: 0 0 0 0 rgba(213,0,0,.5), 0 0 40px rgba(213,0,0,.45); }
+  50%      { box-shadow: 0 0 0 18px rgba(213,0,0,0), 0 0 60px rgba(213,0,0,.6); }
+}
+#signal-label {
+  font-family: var(--head);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#signal-circle.go   ~ #signal-label { color: #00e676; }
+#signal-circle.stop ~ #signal-label { color: #ff1744; }
+@media (max-width: 600px)  { :root { --fsize: 22px; } }
+@media (min-width: 1200px) { :root { --fsize: 32px; } }
+</style>
+</head>
+<body>
+
+<!-- ── Room join overlay ── -->
+<div id="ov">
+  <div class="ov-logo"><span class="a">Real</span><span class="b">Msg</span></div>
+  <p class="ov-sub">Instant receiver — messages appear in milliseconds.</p>
+  <input class="ov-in" id="ovr"
+         placeholder="ROOM CODE"
+         maxlength="10"
+         autocomplete="off"
+         spellcheck="false"
+         style="user-select:auto;-webkit-user-select:auto"
+         oninput="this.value=this.value.toUpperCase().replace(/[^A-Z0-9]/g,'')">
+  <button class="ov-btn" onclick="connect()">Connect →</button>
+  <div class="ov-err" id="overr"></div>
+</div>
+
+<!-- ── Toolbar (hidden until joined) ── -->
+<div class="tb" id="tb" style="display:none">
+  <div class="tb-logo"><span class="a">Real</span><span class="b">Msg</span></div>
+  <div class="tb-room" id="tb-room">—</div>
+  <div class="cdot" id="cdot"></div>
+  <div class="clbl" id="clbl">—</div>
+  <div class="tb-sp"></div>
+  <!-- Sound toggle: OFF by default, saved to localStorage -->
+  <button class="tbtn" id="sound-btn" onclick="toggleSound()">🔇 Sound Off</button>
+  <button class="tbtn" id="theme-btn" onclick="toggleTheme()">☀️ Light</button>
+  <button class="tbtn" onclick="decFont()">A−</button>
+  <button class="tbtn" onclick="incFont()">A+</button>
+  <button class="tbtn" onclick="clearLocal()">🗑 Clear</button>
+</div>
+
+<!-- ── Signal circle (GO = green / STOP = red) ── -->
+<!-- Floats above the message box, centered, pointer-events:none so it never steals focus -->
+<div id="signal-wrap">
+  <div id="signal-circle"></div>
+  <div id="signal-label"></div>
+</div>
+
+<!-- ── Main display ── -->
+<div id="main">
+  <div id="msg-wrap">
+    <div id="empty">Waiting for messages…</div>
+    <div id="lbox">
+      <div id="lts"></div>
+      <button id="lcopy" onclick="copyMsg()">Copy</button>
+      <div id="ltxt"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════
+   RealMsg — Receiver
+   
+   FOCUS SAFETY: This page will NEVER steal focus from Chrome 1.
+   Implemented at 4 independent layers so no single point of failure.
+   
+   DISPLAY: Shows answers (bullet points) only — no question titles.
+   ═══════════════════════════════════════════════════════════════ */
+
+// ═══════════════════════════════════════════════════════════════
+// LAYER 1 — Intercept ALL focus attempts at the earliest point.
+// This runs BEFORE anything else so nothing can sneak past it.
+// ═══════════════════════════════════════════════════════════════
+(function lockFocus() {
+  // 1a. Override HTMLElement.focus() — blocks all programmatic focus calls
+  const _orig = HTMLElement.prototype.focus;
+  HTMLElement.prototype.focus = function (opts) {
+    // Only the room-code input (overlay) is allowed focus — needed
+    // for the user to type the room code once at startup.
+    if (this.id === 'ovr') { _orig.call(this, opts); }
+    // All other .focus() calls are silently dropped.
+  };
+
+  // 1b. Intercept all focusin events in capture phase (fires before any handler).
+  // If anything gets focus, we instantly blur it.
+  document.addEventListener('focusin', function (e) {
+    if (e.target && e.target.id !== 'ovr') {
+      e.target.blur();
+      e.stopImmediatePropagation();
+    }
+  }, true);
+
+  // 1c. Prevent mousedown from moving OS-level keyboard focus to any element.
+  // This is the main cause: clicking a button on Chrome 2 pulls focus.
+  // e.preventDefault() on mousedown stops that — the click still fires.
+  document.addEventListener('mousedown', function (e) {
+    // Allow mousedown only on the overlay connect button and input
+    // (needed so the user can initially connect to the room).
+    const tag = (e.target.tagName || '').toUpperCase();
+    const id  = e.target.id || '';
+    const isOverlay = (id === 'ovr' || id === 'ov-connect-btn' ||
+                       e.target.closest('#ov'));
+    if (!isOverlay) {
+      e.preventDefault(); // ← this single line prevents ALL focus stealing
+    }
+  }, { passive: false, capture: true });
+})();
+
+// ═══════════════════════════════════════════════════════════════
+// LAYER 2 — Set tabindex=-1 on every interactive element.
+// Prevents Tab key from landing on anything in this window.
+// ═══════════════════════════════════════════════════════════════
+function makeNonFocusable() {
+  document.querySelectorAll('button, a, input, select, textarea, [tabindex]')
+    .forEach(el => {
+      if (el.id !== 'ovr') el.setAttribute('tabindex', '-1');
+    });
+}
+// Run immediately and watch for DOM changes (toolbar shows after connect)
+makeNonFocusable();
+new MutationObserver(makeNonFocusable)
+  .observe(document.body, { childList: true, subtree: true });
+
+// ═══════════════════════════════════════════════════════════════
+// LAYER 3 — CSS (already set in <style>):
+//   pointer-events: none on #main message area
+//   user-select: none on body
+// These prevent mouse interaction with the message display area.
+// ═══════════════════════════════════════════════════════════════
+
+// ═══════════════════════════════════════════════════════════════
+// LAYER 4 — Never call window.focus() anywhere in this file.
+//   (Verified: zero calls to window.focus() in this script.)
+// ═══════════════════════════════════════════════════════════════
+
+// ── Socket.IO ────────────────────────────────────────────────────
+const socket = io({
+  autoConnect: true,
+  reconnectionDelay: 500,
+  reconnectionAttempts: Infinity,
+});
+
+// ── State ────────────────────────────────────────────────────────
+let currentRoom = '';
+let darkMode    = true;
+let fontSize    = 28;
+let audioCtx    = null;
+
+// Sound: OFF by default, persisted in localStorage
+let soundOn = localStorage.getItem('realmsg-sound') === 'true';
+applySoundUI();
+
+// ── Auto-connect from URL ────────────────────────────────────────
+const qp = new URLSearchParams(location.search);
+if (qp.get('room')) {
+  document.getElementById('ovr').value = qp.get('room').toUpperCase();
+  // Small delay so the page is fully rendered before connecting
+  setTimeout(connect, 150);
+}
+document.getElementById('ovr').addEventListener('keydown', e => {
+  if (e.key === 'Enter') connect();
+});
+
+// ── Keep-alive ping (prevents Render free tier sleeping) ─────────
+setInterval(() => fetch('/ping').catch(() => {}), 4 * 60 * 1000);
+
+// ── Connect to room ──────────────────────────────────────────────
+window.connect = function () {
+  const r = document.getElementById('ovr').value.trim().toUpperCase();
+  if (!r || r.length < 2) {
+    document.getElementById('overr').textContent = 'Enter a room code';
+    return;
+  }
+  currentRoom = r;
+  socket.emit('join-room', { room: currentRoom });
+
+  document.getElementById('ov').style.display    = 'none';
+  document.getElementById('tb').style.display    = 'flex';
+  document.getElementById('main').style.display  = 'flex';
+  document.getElementById('tb-room').textContent = currentRoom;
+  history.replaceState(null, '', '/receiver?room=' + currentRoom);
+
+  // After overlay closes, re-apply non-focusable to any new elements
+  makeNonFocusable();
+};
+
+// ── Socket events ─────────────────────────────────────────────────
+socket.on('connect', () => {
+  setConn(true, 'Live');
+  if (currentRoom) socket.emit('join-room', { room: currentRoom });
+});
+socket.on('disconnect',    () => setConn(false, 'Reconnecting…'));
+socket.on('connect_error', () => setConn(false, 'Reconnecting…'));
+
+socket.on('new-message', msg => {
+  showMessage(msg);
+  if (soundOn) playBeep();
+});
+
+// History received on join — intentionally NOT displayed.
+// Receiver shows only new live messages, not old ones.
+socket.on('history', () => { /* suppress */ });
+
+socket.on('cleared', () => { clearLocal(); });
+
+// ── Signal: GO / STOP ─────────────────────────────────────────────
+// Sender presses GO  → green glowing circle appears on receiver
+// Sender presses STOP → red glowing circle appears on receiver
+// Circle auto-hides after 6 seconds
+let signalTimer = null;
+socket.on('signal', ({ type }) => {
+  showSignal(type);
+});
+
+function showSignal(type) {
+  const wrap   = document.getElementById('signal-wrap');
+  const circle = document.getElementById('signal-circle');
+  const label  = document.getElementById('signal-label');
+
+  // Reset classes
+  circle.className = '';
+  circle.classList.add(type);                        // 'go' or 'stop'
+  label.textContent  = type === 'go' ? 'START READING' : 'STOP';
+  wrap.style.display = 'flex';
+
+  // Auto-hide after 6 seconds
+  clearTimeout(signalTimer);
+  signalTimer = setTimeout(() => {
+    wrap.style.display = 'none';
+    circle.className   = '';
+    label.textContent  = '';
+  }, 6000);
+}
+
+// ── Display message — ANSWERS ONLY ────────────────────────────────
+// The text field contains only bullet points (no title).
+// white-space: pre-wrap in CSS preserves every line break and bullet.
+function showMessage(msg) {
+  document.getElementById('empty').style.display = 'none';
+
+  const lbox = document.getElementById('lbox');
+  const ltxt = document.getElementById('ltxt');
+  const lts  = document.getElementById('lts');
+
+  lbox.style.display  = 'block';
+  ltxt.textContent    = msg.text;   // textContent = safe (no XSS)
+  lts.textContent     = fmt(msg.ts);
+
+  // Flash animation
+  lbox.classList.remove('pop');
+  void lbox.offsetWidth;            // force reflow to restart animation
+  lbox.classList.add('pop');
+}
+
+// ── Controls ──────────────────────────────────────────────────────
+window.clearLocal = function () {
+  document.getElementById('empty').style.display = 'block';
+  document.getElementById('lbox').style.display  = 'none';
+  document.getElementById('ltxt').textContent    = '';
+};
+
+window.toggleTheme = function () {
+  darkMode = !darkMode;
+  document.body.classList.toggle('light', !darkMode);
+  document.getElementById('theme-btn').textContent = darkMode ? '☀️ Light' : '🌙 Dark';
+};
+
+window.incFont = function () {
+  fontSize = Math.min(fontSize + 4, 72);
+  document.documentElement.style.setProperty('--fsize', fontSize + 'px');
+};
+window.decFont = function () {
+  fontSize = Math.max(fontSize - 4, 14);
+  document.documentElement.style.setProperty('--fsize', fontSize + 'px');
+};
+
+window.copyMsg = function () {
+  const t = document.getElementById('ltxt').textContent;
+  if (!t) return;
+  navigator.clipboard.writeText(t).catch(() => {});
+  const b = document.getElementById('lcopy');
+  b.textContent = 'Copied!';
+  setTimeout(() => b.textContent = 'Copy', 1500);
+};
+
+// ── Sound ─────────────────────────────────────────────────────────
+window.toggleSound = function () {
+  soundOn = !soundOn;
+  localStorage.setItem('realmsg-sound', soundOn);
+  applySoundUI();
+};
+
+function applySoundUI() {
+  const btn = document.getElementById('sound-btn');
+  if (!btn) return;
+  btn.textContent = soundOn ? '🔊 Sound On' : '🔇 Sound Off';
+  btn.classList.toggle('sound-on', soundOn);
+}
+
+function playBeep() {
+  try {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc  = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(660, audioCtx.currentTime);
+    gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.25);
+    osc.start();
+    osc.stop(audioCtx.currentTime + 0.25);
+  } catch (_) {}
+}
+
+// ── Helpers ───────────────────────────────────────────────────────
+function setConn(ok, label) {
+  document.getElementById('cdot').className   = 'cdot ' + (ok ? 'on' : 'off');
+  document.getElementById('clbl').textContent = label;
+}
+
+function fmt(iso) {
+  return new Date(iso).toLocaleTimeString([], {
+    hour: '2-digit', minute: '2-digit', second: '2-digit',
+  });
+}
+</script>
+</body>
+</html>

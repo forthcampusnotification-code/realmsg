@@ -1,0 +1,884 @@
+{
+  "sets": [
+    {
+      "setNo": 1,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I stay calm when someone is angry.\n• I listen to them without stopping.\n• I do not shout or fight back.\n• I try to understand their feelings.\n• If I made a mistake, I say sorry.\n• I give them time to talk fully.\n• I never blame them directly.\n• I show care with kind words.\n• I don’t take angry words personally.\n• If needed, I give them space.\n• Later, I talk again when they are calm.\n• This way, the relationship becomes better.\n• I keep eye contact to show I care.\n• I tell them I value our bond.\n• I try to end the talk with a smile."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I tell my friend how tech helps us daily.\n• We can talk to people far away.\n• Online classes help us learn from home.\n• Hospitals use machines to save lives.\n• Farmers use tech to grow more food.\n• Jobs are easier with computers.\n• We get news and weather fast.\n• Mobile phones save time and energy.\n• Banking and shopping are easy now.\n• Tech helps us stay safe with alerts.\n• If we use tech carefully, it’s good.\n• I say tech is a gift, not a problem.\n• I show examples from real life.\n• I explain how it helps poor people too.\n• I ask them to try using it with care."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between job and study.\n• My family needed money fast.\n• I wanted to study more also.\n• I felt very confused and sad.\n• I made a list of good and bad.\n• I asked my parents for advice.\n• I spoke to my teacher too.\n• Finally, I took a part-time job.\n• I continued studying at night.\n• It was not easy at all.\n• I worked hard and managed both.\n• Now I feel proud of my decision.\n• I learned how to manage time.\n• It taught me real-life skills.\n• I became more responsible from that time."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer came with a complaint.\n• He was upset about delay in service.\n• I greeted him with a smile.\n• I listened to his full problem.\n• I did not interrupt him.\n• I said sorry for the trouble.\n• I checked the issue quickly.\n• I explained the reason for delay.\n• I gave him a fast solution.\n• He was happy with my response.\n• He thanked me before leaving.\n• I felt proud to help him.\n• My manager also praised me.\n• It increased my confidence at work.\n• Helping others made me feel good."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• Once my college ID card was lost.\n• I needed it for an exam.\n• I searched everywhere but couldn’t find it.\n• I did not panic or give up.\n• I went to the office quickly.\n• I explained my situation calmly.\n• They asked for my proof documents.\n• I gave them what they needed.\n• They gave a temporary card.\n• I attended my exam on time.\n• I learned to act fast in problems.\n• Solving problems needs a clear mind.\n• I now keep my things in safe place.\n• I also help others in similar problems.\n• I believe every problem has a solution."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• My teacher gave me good feedback once.\n• It was after my class presentation.\n• She said my speaking was very clear.\n• She liked my body language too.\n• She said I improved a lot.\n• I felt very happy and proud.\n• My friends also clapped for me.\n• I thanked my teacher with a smile.\n• That day gave me more confidence.\n• I felt ready for future tasks.\n• I started helping others in class.\n• Positive words made me feel strong.\n• I now try to do my best always.\n• That moment changed my mindset.\n• Small praise gave me big motivation."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is Dr. A.P.J. Abdul Kalam.\n• He came from a small village.\n• He worked hard and became a scientist.\n• He became the President of India.\n• He was kind and simple in life.\n• He loved students and children.\n• He always gave good messages.\n• He said “Dream big and work hard.”\n• He was honest and respectful.\n• He is known all over the world.\n• I want to be like him one day.\n• He teaches me to stay strong.\n• He shows success comes with honesty.\n• I read his books to learn more.\n• He is a true hero to me."
+        }
+      ]
+    },
+    {
+      "setNo": 2,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• When someone is angry, I stay calm.\n• I don’t shout or get angry back.\n• I listen to their problem fully.\n• I nod and show I understand.\n• I don’t interrupt them when they speak.\n• If I made a mistake, I say sorry.\n• I speak in a soft and kind voice.\n• I don’t blame them or argue.\n• I wait for the right time to talk more.\n• I try to solve the issue with peace.\n• I offer help if they need something.\n• I always try to keep the friendship strong.\n• Good friendship needs patience and care.\n• Anger goes away when we talk kindly.\n• Every problem has a peaceful solution."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I tell them how tech helps daily life.\n• Mobile phones help us talk easily.\n• We learn online from home or school.\n• Doctors use machines to treat people.\n• Farmers grow better crops with tech.\n• We can find information in seconds.\n• We use tech in travel and safety.\n• Shopping and payments are easier now.\n• Jobs are faster with computers and apps.\n• We save time using smart tools.\n• I tell them tech is useful if used right.\n• I explain how life is better with tech.\n• Technology saves lives in emergency times.\n• Even poor villages now get benefits from tech.\n• We just need to use it carefully and smartly."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between two colleges.\n• One college was far but better.\n• The other one was near my home.\n• I had to think about travel and cost.\n• My family helped me think clearly.\n• I made a list of what is important.\n• I thought about my future goals.\n• I chose the far college with more value.\n• I planned how to manage time and travel.\n• It was hard but I felt it was right.\n• Now I am happy with my choice.\n• That decision helped me grow strong.\n• It taught me to think carefully before choosing.\n• Sometimes hard choices bring big rewards.\n• It helped me to become more responsible."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer had a bill payment issue.\n• He looked confused and needed help.\n• I welcomed him with a smile.\n• I asked him what happened.\n• He showed me the bill problem.\n• I checked the system carefully.\n• I explained the correct steps clearly.\n• I helped him pay it successfully.\n• I said thank you for his patience.\n• He was happy and relaxed after that.\n• He said I explained everything well.\n• I felt proud to give good service.\n• I learned that kindness solves many problems.\n• Customers feel happy when we listen properly.\n• Helping others gave me work satisfaction."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• One time I missed my college bus.\n• I had an important test that day.\n• I did not waste time being upset.\n• I searched for other travel options.\n• I found a local auto nearby.\n• I explained the urgency to the driver.\n• He agreed to take me fast.\n• I reached college just on time.\n• I gave my test without panic.\n• I learned to think fast and act smart.\n• Small problems can be solved calmly.\n• That day made me more confident.\n• Every problem has a quick solution.\n• Staying calm helps in tough moments.\n• Now I plan ahead to avoid such problems."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I once gave a speech in my class.\n• I prepared hard for many days.\n• I was nervous but I spoke well.\n• My teacher clapped and smiled at me.\n• She said I spoke with confidence.\n• My classmates also appreciated me.\n• I felt proud and very happy.\n• That moment gave me self-belief.\n• I understood I can do more.\n• I decided to speak more in class.\n• Feedback made me try new things.\n• Good words help us move forward.\n• Now I help others to speak well too.\n• I want to improve more and more.\n• Small praises can bring big changes."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is my mother.\n• She works hard every single day.\n• She never complains about anything.\n• She manages the home with love.\n• She supports me in my studies.\n• She teaches me to be honest.\n• She gives good advice always.\n• Even if she is tired, she smiles.\n• She is strong and never gives up.\n• She is kind to everyone around her.\n• I want to be strong like her.\n• She is my biggest inspiration.\n• She shows me how to be responsible.\n• I learn respect and patience from her.\n• Her love and care guide me every day."
+        }
+      ]
+    },
+    {
+      "setNo": 3,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I keep myself calm and listen quietly.\n• I let them share what they feel.\n• I do not fight or argue with them.\n• I try to understand their pain.\n• I speak slowly and softly.\n• I ask them how I can help.\n• If I made a mistake, I accept it.\n• I never shout or say bad words.\n• I give them time to cool down.\n• I wait before talking more.\n• I say kind words to make them feel better.\n• I believe talking with love solves any issue.\n• I keep a friendly tone even if they are angry.\n• I try to smile to make them calm.\n• I show them that I really care for them."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I say technology helps in daily life.\n• It connects people from far places.\n• Online classes help us learn from home.\n• We can find jobs through the internet.\n• Tech helps in bank work and payments.\n• Hospitals use machines for treatment.\n• Tech gives alerts in danger situations.\n• We can travel easily using apps.\n• It saves time and energy.\n• Farmers use machines to grow more crops.\n• I explain that safe use of tech is good.\n• Technology is a friend if used correctly.\n• Even small shops use tech for billing now.\n• Tech helps students, workers, and elders too.\n• It gives new chances for learning and earning."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between sports and exams.\n• My match and exam were on the same day.\n• I love sports, but study is also important.\n• I thought deeply about what to do.\n• I discussed it with my parents.\n• I asked my teacher for advice too.\n• I wrote down my thoughts on paper.\n• Finally, I chose to write the exam.\n• I informed my team politely.\n• I studied well and did my best.\n• After the exam, I rejoined practice.\n• It was hard but the right decision.\n• I felt sad for missing the match.\n• But I was proud of my choice.\n• It taught me how to make tough decisions."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• One customer could not understand a form.\n• She was confused and looked worried.\n• I went to her and offered help.\n• I explained each part of the form.\n• I showed her how to fill it.\n• I stayed with her until it was done.\n• I was polite and respectful.\n• I made sure all details were correct.\n• She said thank you with a smile.\n• She felt happy and relaxed after that.\n• I felt good to support someone.\n• Helping others is a great feeling.\n• My manager saw and praised me.\n• It gave me more confidence at work.\n• That moment made my day special."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• I once forgot to bring my hall ticket.\n• My exam was starting in 30 minutes.\n• I felt scared but stayed calm.\n• I called my home and asked for help.\n• My brother brought it quickly by bike.\n• I thanked him and rushed to the hall.\n• I explained to the teacher politely.\n• They allowed me to enter just in time.\n• I finished my exam without stress.\n• I learned to check everything before leaving.\n• I now make a list before any big day.\n• That day taught me to stay alert.\n• Now I pack my bag one day before.\n• It showed me how family helps in need.\n• It made me careful and more responsible."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I took part in a quiz contest.\n• I answered many questions correctly.\n• My teacher praised my knowledge.\n• She said I prepared very well.\n• She told others to learn from me.\n• I felt proud of myself.\n• I started reading more after that.\n• My parents were also happy.\n• It gave me new energy to grow.\n• I joined more contests after that.\n• Good words push us to do better.\n• I will always remember that day.\n• It made me believe in my own ability.\n• Now I help my friends to prepare too.\n• That feedback changed my thinking."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is my father.\n• He works hard every day.\n• He wakes up early and never gives up.\n• He supports our family with love.\n• He teaches me to be honest.\n• He helps others without asking anything.\n• He never shows stress or anger.\n• He tells me to study well.\n• He always believes in me.\n• I want to be strong like him.\n• He is a real hero in my life.\n• I follow his advice every day.\n• He shows how to stay calm in problems.\n• He smiles even when he is tired.\n• His life is a lesson for me."
+        }
+      ]
+    },
+    {
+      "setNo": 4,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• When my friend is angry, I stay calm.\n• I do not react with anger.\n• I ask them to share what happened.\n• I listen carefully without stopping them.\n• I don’t laugh or make fun of them.\n• I say I care and want to help.\n• I try to understand their point of view.\n• If I made a mistake, I say sorry.\n• I speak kindly and slowly.\n• I give them time to feel better.\n• I offer to solve the problem together.\n• After some time, we talk and become happy.\n• I try to make them smile again.\n• Our bond becomes stronger after the talk.\n• Understanding each other helps the friendship grow."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I say that technology makes life easier.\n• It helps people talk from any place.\n• We can learn online without going to school.\n• Doctors use tech to save lives.\n• Farmers get more help using machines.\n• We can do bank work without going outside.\n• Shopping and paying bills are faster now.\n• We find answers to questions quickly.\n• Maps help us travel safely.\n• We can protect homes with smart devices.\n• Tech saves time and gives comfort.\n• I tell them to use it wisely and enjoy the benefits.\n• Technology helps during lockdowns and emergencies.\n• Even poor villages are getting internet today.\n• We must teach others to use tech safely."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between two friends.\n• They both had a fight and wanted my support.\n• I did not want to hurt anyone.\n• I stayed quiet and thought deeply.\n• I spoke to both friends kindly.\n• I told them not to fight.\n• I said both are important to me.\n• I asked them to understand each other.\n• I stayed fair and did not take sides.\n• They later said sorry and became friends again.\n• It was a hard moment but I handled it.\n• I learned to be neutral in tough situations.\n• Now they both trust me more.\n• They said I acted with maturity.\n• This helped me become a better friend."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer came to return a product.\n• He was upset and needed help.\n• I welcomed him politely.\n• I asked him what went wrong.\n• I checked the product details.\n• I found the reason for the issue.\n• I explained the return policy clearly.\n• I helped him fill the form.\n• I gave him a replacement item.\n• He smiled and thanked me.\n• He said I explained things well.\n• I was happy to solve his issue.\n• My manager saw and appreciated me.\n• I felt proud of my communication skills.\n• Customer service teaches us to stay patient."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• My mobile phone stopped working during a test.\n• I needed it for an online exam.\n• I felt worried but stayed strong.\n• I asked a friend for help.\n• He gave me his phone to use.\n• I logged in and continued the test.\n• I finished it without missing anything.\n• After that, I gave his phone back.\n• I said thank you many times.\n• I learned to stay calm in crisis.\n• Teamwork helped me that day.\n• Problems are small if we act smart.\n• I always keep backup plans now.\n• It made me trust and value my friends.\n• That day taught me quick decision-making."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I once helped organize a college event.\n• I did decoration and arranged chairs.\n• My teacher saw my hard work.\n• She said I did everything well.\n• She gave me a thank you note.\n• My friends clapped for me.\n• I felt very special that day.\n• It made me work harder next time.\n• I felt part of a team.\n• I shared the feedback with my family.\n• They were happy to hear it.\n• Kind words give big strength.\n• I now help in more college activities.\n• It helped me improve my teamwork skills.\n• I believe every small help gets noticed."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is my elder sister.\n• She takes care of our whole family.\n• She works in an office and studies also.\n• She never says she is tired.\n• She teaches me good values.\n• She tells me to never lie.\n• She helps me with my homework.\n• She cooks, works, and still smiles.\n• She is brave and confident.\n• Everyone in the house listens to her.\n• I want to be strong like her.\n• She is my best guide in life.\n• She teaches me how to manage time.\n• Her words always motivate me.\n• She is my everyday inspiration."
+        }
+      ]
+    },
+    {
+      "setNo": 5,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• When my family member is angry, I stay calm.\n• I don’t say anything until they finish speaking.\n• I try to understand why they are upset.\n• I listen with full attention.\n• I don’t blame them or shout.\n• I say sorry if it is my mistake.\n• I speak in a gentle tone.\n• I ask what I can do to fix it.\n• If they need time, I give them space.\n• I check on them after some time.\n• I try to make them smile again.\n• Peaceful talk helps to solve any issue.\n• I remind them how important they are to me.\n• I say we can solve anything together.\n• This builds a strong and caring bond."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I tell my friend tech helps people every day.\n• It makes communication fast and easy.\n• We can study from home using mobile.\n• Hospitals save lives with modern machines.\n• Farmers use machines for good crops.\n• We pay bills from our phones.\n• Tech helps in police and safety work.\n• It gives us weather updates and news.\n• We can work from home using computers.\n• Tech saves time and energy.\n• If we use tech properly, it helps us grow.\n• I say tech is useful for a better future.\n• Even during lockdown, tech kept us connected.\n• Many small businesses grow using technology.\n• Tech is helping in education and health fields."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between two job offers.\n• One job was near home with low salary.\n• Another was far with good salary.\n• I thought about money and travel both.\n• I spoke to my parents about it.\n• I made a list of good and bad points.\n• I checked which job had more growth.\n• I chose the job with better future.\n• I planned how to stay away from home.\n• I saved travel money each month.\n• It was a hard but smart decision.\n• That job helped me learn and grow.\n• I became more independent and bold.\n• This decision improved my lifestyle.\n• Now I feel proud of my choice."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer couldn’t use the ATM machine.\n• He looked confused and asked for help.\n• I greeted him and asked the issue.\n• He didn’t know how to withdraw money.\n• I explained each step clearly.\n• I helped him press the right buttons.\n• I stood beside him till the end.\n• He finally took the money safely.\n• He said thank you and smiled.\n• I was happy to make him comfortable.\n• Helping customers gives me joy.\n• Good service brings trust and respect.\n• My manager praised me for my support.\n• I felt confident in my job.\n• Small help can make someone’s day better."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• My college project file got deleted.\n• It was one day before submission.\n• I felt shocked but didn’t waste time.\n• I told my group members quickly.\n• We divided the work again.\n• I stayed up the whole night.\n• We typed everything one more time.\n• I checked all files before saving.\n• We printed and submitted on time.\n• Our teacher liked the final result.\n• We learned how to work under pressure.\n• That day taught me teamwork and planning.\n• I now save copies of all important files.\n• That night made us stronger as a team.\n• It showed me how not to give up."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I gave a seminar in my college.\n• I spoke clearly and with confidence.\n• My teacher appreciated my effort.\n• She said I improved a lot.\n• My classmates clapped for me.\n• I was happy to hear good words.\n• It gave me motivation to do more.\n• I started reading more books.\n• I joined the next seminar also.\n• I felt more comfortable speaking.\n• Positive feedback builds our confidence.\n• It made me believe in myself.\n• I now help others prepare for seminars.\n• That feedback changed my thinking.\n• Good words stay in our heart forever."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is my school teacher.\n• She taught me for 5 years.\n• She always spoke with kindness.\n• She explained every lesson with care.\n• She supported weak students the most.\n• She believed in me when I didn’t.\n• She told me I have talent.\n• She was always on time to class.\n• She was simple and honest.\n• I want to be helpful like her.\n• I follow her advice every day.\n• She made me love learning.\n• She changed my life with her words.\n• She taught me to respect everyone.\n• One day, I also want to become a teacher."
+        }
+      ]
+    },
+    {
+      "setNo": 6,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I stay patient when someone is angry.\n• I give them time to talk fully.\n• I listen without stopping or judging.\n• I keep my voice low and soft.\n• I avoid saying anything negative.\n• I let them feel they are heard.\n• I think calmly before answering.\n• If I made a mistake, I say sorry.\n• I ask how I can make it better.\n• I try to solve the issue peacefully.\n• After some time, we talk again.\n• My goal is to keep the bond strong.\n• I try to remind them of happy times.\n• I give them comfort and support.\n• Kindness and respect calm the situation."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I tell my friend how tech helps everyone.\n• It gives fast access to information.\n• We can talk to people far away.\n• Online learning is now possible.\n• Hospitals use tech to treat patients.\n• Farmers use tech for better farming.\n• Jobs can be done using mobile or laptop.\n• We can track weather and disasters.\n• Shopping and banking are easier now.\n• It saves time and effort daily.\n• Tech is useful when used safely.\n• It makes life better for everyone.\n• I give examples from real life.\n• I show how tech helped during lockdown.\n• I ask them to try using it positively."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to leave my hometown for studies.\n• I felt sad to leave family.\n• I also wanted a better future.\n• I discussed with my parents.\n• I checked all colleges and courses.\n• I chose the best option for me.\n• I prepared for the move.\n• I faced new people and places.\n• I missed home in the beginning.\n• Slowly, I got used to it.\n• I became stronger and independent.\n• It was a tough but right decision.\n• It helped me grow mentally and emotionally.\n• Now I can handle new challenges easily.\n• This decision changed my life for good."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer was confused with a form.\n• He was trying to fill it online.\n• I asked him what issue he faced.\n• I explained each point clearly.\n• I helped him fill it correctly.\n• I checked the details twice.\n• I stayed polite and friendly.\n• He completed the process smoothly.\n• He smiled and thanked me.\n• He said I made it easy for him.\n• I felt happy to assist.\n• Good service builds customer trust.\n• He said he will visit again.\n• My manager appreciated my effort.\n• It motivated me to help more people."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• One day I lost my bus pass.\n• I had to attend college next day.\n• I searched everywhere but didn’t find it.\n• I spoke to the bus manager.\n• I showed him my ID card.\n• He gave me temporary permission.\n• I applied for a new pass.\n• I received it after two days.\n• I thanked him for the help.\n• I learned to keep things safe.\n• I now check my bag daily.\n• Solving small problems builds confidence.\n• I also help my friends be careful.\n• I learned to stay calm and act fast.\n• This made me more responsible."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I helped plan an event at college.\n• I worked on stage decoration.\n• Everyone liked the designs.\n• My teacher praised my creativity.\n• She said I worked with dedication.\n• I felt proud to hear good words.\n• I shared the feedback with my parents.\n• It gave me energy to do more.\n• I joined more event teams later.\n• Feedback helped me trust my skills.\n• I always try to give my best.\n• Positive words make big impact.\n• It helped me discover my talent.\n• I started believing in myself more.\n• Now I enjoy doing creative work."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is my grandfather.\n• He lived a simple and honest life.\n• He woke up early every day.\n• He read books and newspapers.\n• He helped poor people in our village.\n• He taught me to respect everyone.\n• He believed in hard work and truth.\n• He never spoke badly about others.\n• He guided many children in studies.\n• He loved nature and animals.\n• I want to follow his values.\n• He is my hero in real life.\n• He always smiled even in hard times.\n• He inspired many people around him.\n• I feel proud to be his grandchild."
+        }
+      ]
+    },
+    {
+      "setNo": 7,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I try to stay cool and silent.\n• I do not fight back with words.\n• I look at their face and listen.\n• I wait till they stop talking.\n• I say I understand their feeling.\n• I never say “you are wrong.”\n• I ask them how I can help.\n• I accept my mistake if it’s true.\n• I keep my body language relaxed.\n• I tell them I care for them.\n• After they calm down, I talk slowly.\n• I focus on peace, not blame.\n• I give them a chance to share fully.\n• I believe kindness can cool anger.\n• This way, the bond becomes stronger."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I share how tech changed our life.\n• We can learn anything online.\n• Doctors use tech for better care.\n• Farmers use tech for more crops.\n• Police use tech to catch criminals.\n• It helps in school and college work.\n• Job search is faster with apps.\n• Tech helps during natural disasters.\n• We connect with friends and family.\n• We get alerts for safety.\n• I tell him to use tech smartly.\n• With care, tech is very helpful.\n• It supports every part of our life.\n• Even small villages use tech today.\n• I show examples that inspire trust."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to leave my comfort zone.\n• I was shy but joined a public speaking club.\n• I was scared to talk in front of people.\n• I told myself to try once.\n• I wrote my first speech with care.\n• I practiced in front of a mirror.\n• My hands were shaking on stage.\n• But I finished the speech well.\n• Everyone clapped for me.\n• I felt proud of trying.\n• That day changed my fear to courage.\n• It was a hard but best decision.\n• Now I enjoy speaking in front of others.\n• It made me a better student and person.\n• It opened new chances for growth."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer came for account opening.\n• She was not sure about the documents.\n• I welcomed her with a smile.\n• I explained the list one by one.\n• I checked her papers carefully.\n• I helped her fill the form.\n• I asked for her signature.\n• I guided her to the next counter.\n• She was thankful and relaxed.\n• She said I was very helpful.\n• I felt happy to support her.\n• I love giving good customer service.\n• My team appreciated my effort.\n• She told others I was kind.\n• It gave me confidence in handling people."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• My computer stopped working before submission.\n• My project file was inside it.\n• I didn’t cry or panic.\n• I took help from a lab assistant.\n• He gave me another system.\n• I logged into my email and got a copy.\n• I checked everything again.\n• I completed the project on time.\n• I learned to keep backup always.\n• Solving the problem gave me strength.\n• I thanked the lab person.\n• Quick thinking saved the day.\n• Now I always use cloud storage.\n• This taught me to handle stress calmly.\n• Every problem has a smart solution."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I helped my friend understand maths.\n• He was weak in some topics.\n• I explained it step by step.\n• He passed the exam with good marks.\n• He told the teacher I helped him.\n• Teacher appreciated me in front of class.\n• I felt very happy that day.\n• I never expected public praise.\n• I felt more confident in myself.\n• I started helping more friends.\n• That feedback changed my mindset.\n• Helping others brings joy too.\n• My confidence in teaching grew.\n• Now others ask me for help often.\n• I feel proud to be useful to others."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is Prime Minister Modi.\n• He came from a simple family.\n• He worked as a tea seller in childhood.\n• He became the leader of the nation.\n• He speaks confidently in public.\n• He works hard every day.\n• He believes in discipline and service.\n• He makes strong decisions.\n• He inspires many people in India.\n• I like his speeches and words.\n• I want to be confident like him.\n• He shows dreams can become real.\n• He proves success comes from hard work.\n• He never forgets his roots.\n• I hope to lead like him one day."
+        }
+      ]
+    },
+    {
+      "setNo": 8,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I stay calm and don’t get angry back.\n• I give them time to speak fully.\n• I listen to their words carefully.\n• I keep eye contact and nod.\n• I don’t argue or blame.\n• I say sorry if I am wrong.\n• I speak with respect and care.\n• I understand they are hurt or sad.\n• I give them some space if needed.\n• After some time, I check on them.\n• I ask how I can make things better.\n• I try to end the problem with love.\n• I remind them that our bond matters.\n• Kindness helps calm the situation.\n• We both feel better after the talk."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I will tell how tech helps in life.\n• It gives easy access to knowledge.\n• We can video call our family.\n• Doctors can do better treatments.\n• Students learn from anywhere online.\n• Farmers use machines for farming.\n• Shopping and delivery are now simple.\n• Payments happen with one click.\n• Safety tools help us in emergencies.\n• Weather updates come fast and free.\n• I say use tech carefully for good use.\n• Tech is like a tool for success.\n• It connects the whole world easily.\n• It creates new jobs and skills.\n• Tech saves time, energy, and effort."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between work and exam.\n• My job needed me on exam day.\n• I was scared to lose the job.\n• I didn’t want to fail in the exam.\n• I made a time schedule to check.\n• I spoke to my manager politely.\n• I explained my situation honestly.\n• He agreed to change my shift.\n• I attended the exam without stress.\n• I completed my work after the test.\n• It taught me to speak clearly and plan.\n• That decision helped me manage both.\n• Now I am not afraid of big decisions.\n• I learned the value of time management.\n• It showed that honesty brings results."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer had trouble using net banking.\n• He was old and not tech-friendly.\n• I asked him to sit comfortably.\n• I explained each step clearly.\n• I did not touch his private data.\n• I guided him with proper words.\n• He smiled as he understood it well.\n• I asked if he wanted a printed guide.\n• He said yes and took it happily.\n• He thanked me many times.\n• Helping others made me feel proud.\n• Good support builds strong trust.\n• My manager praised my behavior.\n• I learned to be patient and polite.\n• The customer said he will come again."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• I was once sick before a test.\n• I was unable to prepare well.\n• I used my class notes to revise.\n• I studied only important points.\n• I took advice from my friend.\n• I drank water and took rest in breaks.\n• I gave my best in the exam.\n• I passed the test with decent marks.\n• I didn’t lose hope even when weak.\n• I learned to use time wisely.\n• Health and planning are both needed.\n• It taught me to be strong in problems.\n• Now I take care of my health better.\n• I always keep backup plans now.\n• That day made me more confident."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I worked on a team project.\n• I completed my part before time.\n• I helped others in their work too.\n• My teacher saw my effort.\n• She said I was responsible and helpful.\n• She gave me a good remark.\n• My friends also appreciated me.\n• That feedback gave me confidence.\n• I felt proud of myself.\n• I now take leadership in small groups.\n• Encouragement pushes us forward.\n• Good words bring big changes.\n• It made me enjoy team work more.\n• Now I support others like I was supported.\n• Feedback helps us grow faster."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is Virat Kohli.\n• He is strong and focused.\n• He works very hard on fitness.\n• He never gives up in tough games.\n• He leads his team with pride.\n• He shows respect to all players.\n• He supports young talent.\n• He is brave and confident on field.\n• He speaks with power and honesty.\n• I want to have his confidence.\n• He proves hard work gives success.\n• I follow his journey to stay inspired.\n• He teaches the value of discipline.\n• He motivates millions with his journey.\n• He is a true leader by example."
+        }
+      ]
+    },
+    {
+      "setNo": 9,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I stay calm when someone is angry.\n• I do not shout back or argue.\n• I listen to their words carefully.\n• I try to understand their pain.\n• I wait until they finish talking.\n• I say sorry if I made a mistake.\n• I speak in a soft and kind way.\n• I don’t judge them for being angry.\n• I give them time to feel better.\n• Later, I talk to clear misunderstandings.\n• I try to solve the issue with love.\n• This helps us stay close and peaceful.\n• I learn from each argument how to be better.\n• Patience is the key to healing any hurt.\n• Respect keeps the friendship strong."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I will say technology is helping people everywhere.\n• It makes education possible from any place.\n• It saves lives in hospitals through machines.\n• Farmers use machines to grow more food.\n• We can talk to our family anytime.\n• We can pay bills without standing in lines.\n• News and updates come quickly on mobile.\n• Safety apps help people in trouble.\n• Online jobs help people earn from home.\n• Shopping is easier with apps and websites.\n• I will say we must use tech wisely.\n• Technology is useful when used with care.\n• It helps people in villages and cities equally.\n• It supports small businesses and students.\n• Tech brings comfort, speed, and connection."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to decide between two career paths.\n• One was my dream but risky.\n• The other was safe but not my interest.\n• I was confused and worried.\n• I wrote down pros and cons of both.\n• I spoke to my teacher and parents.\n• I thought about my long-term goal.\n• I finally chose the dream path.\n• I worked extra hard to succeed.\n• It was not easy but worth it.\n• Now I feel happy with my decision.\n• It made me brave and focused.\n• I trust myself more after that day.\n• Every tough choice builds confidence.\n• It taught me to follow my passion."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer was confused about a bank statement.\n• He thought some money was missing.\n• I greeted him and asked for the details.\n• I checked the system carefully.\n• I found the issue was a delay in update.\n• I explained the reason in simple words.\n• I showed him the correct balance.\n• I gave him a printed copy too.\n• He felt calm after the explanation.\n• He thanked me for solving the problem.\n• I smiled and said happy to help.\n• Solving customer issues makes me proud.\n• He said I made things easy for him.\n• I felt confident in my communication.\n• Helping others gave me work satisfaction."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• I had a power cut during online class.\n• My laptop battery was low.\n• I did not panic or feel angry.\n• I quickly switched to mobile data.\n• I joined the class using my phone.\n• I informed the teacher about my issue.\n• I took notes on paper that day.\n• I later completed the missed part.\n• I stayed focused on my learning.\n• I was happy I managed the problem.\n• I learned to act smart during trouble.\n• Now I always keep my devices charged.\n• It taught me to stay calm in any situation.\n• Every challenge is a lesson to grow.\n• I became more responsible after that."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I wrote an article for the college magazine.\n• It was my first time writing something.\n• I worked on it with full heart.\n• My English teacher read it aloud in class.\n• She said my ideas were very good.\n• She praised my writing skills.\n• My friends clapped for me.\n• I felt surprised and proud.\n• That feedback gave me new hope.\n• I started writing more articles.\n• I believed in myself after that day.\n• Good feedback can change your future.\n• I now enjoy writing and sharing thoughts.\n• It gave me courage to try new things.\n• That day started my writing journey."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is my college principal.\n• He always comes on time.\n• He speaks with respect to all.\n• He guides students with care.\n• He dresses simple but looks confident.\n• He supports poor students with free books.\n• He solves problems without shouting.\n• He gives good advice during speeches.\n• He motivates everyone to do better.\n• I want to follow his discipline.\n• He is a good leader and a good human.\n• He inspires me to become a better person.\n• He teaches us values through actions.\n• He is kind and strong at the same time.\n• I hope to be a leader like him someday."
+        }
+      ]
+    },
+    {
+      "setNo": 10,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• When my friend is angry, I stay silent first.\n• I let them finish speaking without stopping.\n• I listen carefully to their feelings.\n• I do not get angry in return.\n• I ask them what made them upset.\n• I try to understand their problem.\n• If I made a mistake, I accept it.\n• I say sorry in a calm voice.\n• I do not blame them or others.\n• I wait for the right time to talk.\n• I try to make them smile again.\n• Solving problems with love is my goal.\n• I make sure they feel respected.\n• I want peace more than being right.\n• This builds trust in our friendship."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I say technology makes life simple.\n• We can talk to people in other countries.\n• Students can learn online easily.\n• Hospitals use modern machines to save lives.\n• Farmers grow more crops with tech help.\n• We can do shopping from home.\n• Tech gives fast information and alerts.\n• We get job offers through online sites.\n• Maps guide us in unknown places.\n• Tech saves our time every day.\n• I tell my friend to use tech wisely.\n• Technology helps the world grow fast.\n• It supports both business and education.\n• It connects people in seconds.\n• Tech makes daily tasks smoother and faster."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between my family event and an interview.\n• My cousin's wedding and my job interview were on the same day.\n• My family wanted me at the wedding.\n• I didn’t want to miss the job chance.\n• I felt confused and nervous.\n• I spoke to my parents calmly.\n• They asked me to focus on my future.\n• I attended the interview with full preparation.\n• I told my cousin I will meet later.\n• I got selected for the job.\n• My family felt proud of me.\n• I learned to take bold steps.\n• It showed me how to prioritize wisely.\n• I learned to handle pressure with confidence.\n• Now I believe in making smart choices."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer had an issue with ATM cash.\n• He didn’t receive money but amount was cut.\n• He was worried and upset.\n• I greeted him and asked the details.\n• I checked the complaint register.\n• I filled a complaint form for him.\n• I told him the process clearly.\n• I gave him the reference number.\n• I promised to follow up on his case.\n• He felt calm after that.\n• He said I handled it well.\n• I felt proud to give support.\n• My manager appreciated my quick response.\n• It increased the customer’s trust in our bank.\n• I learned how to handle tense situations calmly."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• I once lost my phone before class.\n• It had my timetable and notes.\n• I searched everywhere but didn’t find it.\n• I borrowed a friend’s phone to call mine.\n• Someone picked and returned it to me.\n• I thanked that person with a smile.\n• I reached class on time after that.\n• I now keep my phone in a safe pocket.\n• I also take paper notes as backup.\n• That day I learned to stay calm.\n• Every problem has a solution.\n• Panic doesn’t help, actions do.\n• It taught me the value of alertness.\n• Small mistakes can bring big lessons.\n• I became more organized after that."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I cleaned the classroom before an event.\n• My teacher saw my effort and smiled.\n• She praised me in front of others.\n• She said I set a good example.\n• My classmates clapped for me.\n• I felt happy and special that day.\n• I got a small appreciation gift too.\n• My parents were proud when I told them.\n• I felt like doing more helpful work.\n• It gave me strength to volunteer again.\n• Feedback helps me feel valuable.\n• That day was full of good energy.\n• Now I try to take more responsibilities.\n• It made me love teamwork and service.\n• Praise pushes me to grow further."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is Ratan Tata.\n• He is a great businessman from India.\n• He always helps people in need.\n• He gave money for education and health.\n• He does business with honesty.\n• He respects workers at all levels.\n• He thinks about country before profit.\n• His company gives jobs to many.\n• He lives a simple life.\n• He never shows off his money.\n• I want to be kind and successful like him.\n• He is an example of good leadership.\n• He teaches us to stay humble always.\n• He proves success and kindness can go together.\n• He inspires me to work for society too."
+        }
+      ]
+    },
+    {
+      "setNo": 11,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• When my family member is angry, I stay quiet.\n• I let them speak without stopping them.\n• I listen with full attention.\n• I do not interrupt or shout.\n• I ask them what happened calmly.\n• I show that I care about their feelings.\n• If I am wrong, I say sorry honestly.\n• I speak slowly and kindly.\n• I try to find the reason behind the anger.\n• I offer help to solve the issue.\n• I give them time to cool down.\n• After that, I talk again with love.\n• This helps to avoid future fights.\n• It shows that I respect their emotions.\n• Peaceful talks make the bond stronger."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I will tell them how tech helps everyone.\n• It saves lives in hospitals.\n• It helps farmers grow more crops.\n• It allows students to study online.\n• It connects people from faraway places.\n• We get job offers and news easily.\n• Shopping and bill payments are easier.\n• Weather updates help people stay safe.\n• Tech is used in police and army work.\n• I explain how it saves time and energy.\n• I say using tech wisely is important.\n• With care, tech can improve our life.\n• It creates new job opportunities for youth.\n• It makes learning fun and creative.\n• We can solve big problems with smart tools."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between family trip and exam.\n• My whole family was going on vacation.\n• My exam date was during the trip.\n• I felt sad and confused.\n• I thought deeply about my future.\n• I discussed with my parents calmly.\n• They told me to focus on studies.\n• I stayed back and prepared well.\n• I gave my exam with full confidence.\n• I scored high marks in that subject.\n• Later, we planned another short trip.\n• I felt proud of my sacrifice.\n• It taught me to focus on my goals.\n• That day I chose responsibility over fun.\n• It made me feel more mature and strong."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer lost his mobile banking PIN.\n• He came worried and needed help.\n• I welcomed him with a smile.\n• I asked for his ID proof.\n• I followed the bank’s reset process.\n• I helped him set a new PIN.\n• I explained steps for future safety.\n• He thanked me for being patient.\n• He said he felt secure with my help.\n• I told him to contact anytime.\n• Solving the issue made me feel good.\n• I believe in supporting customers kindly.\n• My manager appreciated my work.\n• Helping him made me more confident.\n• I learned the value of polite service."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• My printer stopped working before assignment.\n• I had only 2 hours left.\n• I didn’t waste time complaining.\n• I checked with my friend nearby.\n• He allowed me to use his printer.\n• I carried the file in a pen drive.\n• I printed it and submitted on time.\n• I thanked him with a small treat.\n• I learned to stay calm under stress.\n• Now I keep backup options ready.\n• That experience made me act faster.\n• Solving problems needs planning and focus.\n• I now check everything one day early.\n• It made me respect time more.\n• I learned to think and act quickly."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I designed a poster for college fest.\n• It was my first design work.\n• I used simple ideas and colors.\n• My teacher liked it very much.\n• She praised me in front of others.\n• She said I have creative talent.\n• My friends were surprised and happy.\n• I felt proud and smiled big.\n• It gave me confidence in design.\n• I started learning more tools online.\n• Good words push us to grow.\n• That moment was very special for me.\n• Now I enjoy creative work more.\n• It opened a new interest for me.\n• That feedback still motivates me."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is my uncle.\n• He came from a small village.\n• He worked hard to become an engineer.\n• He helps our family in many ways.\n• He teaches me to be honest and kind.\n• He speaks softly and helps others.\n• He supports poor students with books.\n• He guides me in career choices.\n• He motivates me to never give up.\n• He believes in simple living and hard work.\n• I want to be like him one day.\n• He is a great example in my life.\n• He leads with actions, not just words.\n• I feel proud to learn from him.\n• He shows how success and kindness can go together."
+        }
+      ]
+    },
+    {
+      "setNo": 12,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I take a deep breath and stay calm.\n• I listen carefully without speaking in between.\n• I allow them to express all their feelings.\n• I avoid getting angry in return.\n• I try to understand their point of view.\n• I ask what made them feel this way.\n• If I was wrong, I admit it and say sorry.\n• I speak gently and with respect.\n• If needed, I give them time to cool down.\n• I meet them later with a smile.\n• I talk peacefully to clear the issue.\n• I don't let anger break our bond.\n• I try not to repeat the same mistake.\n• I value the relationship more than ego.\n• I always choose peace over fights."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I say life is better with modern tools.\n• We can talk to anyone from anywhere.\n• Learning has become easier through apps.\n• Doctors can treat patients faster now.\n• Farmers grow more food using machines.\n• Payments can be done from mobile.\n• Weather updates save lives during floods.\n• Office work is easier with software.\n• Students can study anytime online.\n• I explain how tech saves energy and time.\n• I say use it wisely, not blindly.\n• It helps poor people through online help.\n• Emergency services reach faster now.\n• It opens jobs in tech companies.\n• Tech joins people from different places."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to pick between a job and a course.\n• The job paid well but I liked the course.\n• The course was useful for my future.\n• I spoke to my parents for advice.\n• I also thought about long-term plans.\n• I listed the good and bad points of both.\n• I chose the course to build my skills.\n• I saved money for fees and managed time.\n• I worked part-time to support myself.\n• I'm happy I chose growth over quick money.\n• It made me stronger and wiser.\n• That choice changed my career path.\n• I learned to take brave decisions.\n• I tell others to think ahead.\n• A good choice now helps later."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer came with a payment issue.\n• He looked confused and needed help.\n• I greeted him with a smile.\n• I asked about his problem clearly.\n• I showed him the right counter.\n• I guided him step-by-step.\n• I helped fill out his complaint form.\n• I kept checking if he understood.\n• I gave him updates about the progress.\n• He was satisfied with my service.\n• He thanked me before leaving.\n• I felt proud to support him.\n• I always aim to be helpful.\n• I stayed calm and clear throughout.\n• He said he trusted the bank more now."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• One day I lost my ID card before exam.\n• I didn't get upset or cry.\n• I searched all my bags and books.\n• I called my friend to check his place.\n• Still, I couldn't find it.\n• I quickly went to the office for a duplicate.\n• I explained the problem politely.\n• They gave me a temporary card.\n• I reached the exam hall on time.\n• I thanked everyone who helped.\n• I now take care of my things better.\n• I keep extra copies of important items.\n• I also help others who lose things.\n• It made me think fast and act calm.\n• That day taught me to stay responsible."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I volunteered to decorate for a college event.\n• I worked with full heart and energy.\n• My teacher saw my dedication.\n• She praised my creativity in front of all.\n• She said I was a good team player.\n• I felt very happy and proud.\n• My classmates also said kind words.\n• It gave me more energy to help.\n• I started joining more college activities.\n• That moment boosted my confidence.\n• Her words stayed in my mind.\n• It made me love my college even more.\n• I learned that hard work gets noticed.\n• I now help in every event happily.\n• That feedback changed my attitude."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is A. P. J. Abdul Kalam.\n• He was India's former president.\n• He was a great scientist and leader.\n• He came from a poor background.\n• He worked hard and followed his dreams.\n• He always motivated students.\n• He believed in simple living and big thinking.\n• He wrote books to inspire youth.\n• I read his quotes when I feel low.\n• I want to follow his values in life.\n• He showed how knowledge brings power.\n• His life teaches kindness and honesty.\n• I dream to do something great like him.\n• His story gives me daily strength.\n• He is a true hero for all of us."
+        }
+      ]
+    },
+    {
+      "setNo": 13,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I stay quiet when someone is angry.\n• I do not fight or speak loudly.\n• I let them say everything first.\n• I listen to them with full attention.\n• I stay calm and show care.\n• I try to understand their point.\n• If I made a mistake, I accept it.\n• I say sorry with honesty.\n• I don’t blame or complain.\n• I give them some space if needed.\n• Later I speak again in a friendly way.\n• I try to make the relationship stronger.\n• I remind them that I value them.\n• I believe love can fix any issue.\n• Handling anger with patience brings peace."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I explain that tech helps all fields.\n• Students study online from home.\n• Doctors use machines for fast care.\n• Farmers use tools to grow more.\n• Business can grow through online apps.\n• We can call anyone anytime.\n• Maps help us travel without getting lost.\n• Tech helps save time and effort.\n• It gives job alerts and news.\n• We can learn new skills on YouTube.\n• I say to use tech smartly and safely.\n• Tech is helpful when used the right way.\n• It connects people all over the world.\n• It creates more chances for earning and learning.\n• Tech is a gift when used for good."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between two internships.\n• One was paid but far away.\n• The other was close but unpaid.\n• I listed all pros and cons.\n• I spoke to my parents for advice.\n• I checked which one matched my goals.\n• I chose the unpaid one near home.\n• I got more learning experience from it.\n• I worked hard and got a job later.\n• It was a hard but smart decision.\n• I trusted my choice and stayed focused.\n• That experience helped my career start.\n• It taught me to think about long-term value.\n• I learned that money is not always the goal.\n• Taking the right path gives good results."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer lost her transaction slip.\n• She was worried about the payment.\n• I greeted her with a smile.\n• I asked for her basic details.\n• I checked her payment in the system.\n• I printed a new slip for her.\n• I explained how to keep records safely.\n• She was happy and said thank you.\n• She said I explained very clearly.\n• I felt proud to help her.\n• Customer support is important in every job.\n• I like helping people with care.\n• My positive attitude made her feel better.\n• I learned how to solve issues politely.\n• Her smile showed that I did my job well."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• My exam center was changed suddenly.\n• I got the message late at night.\n• I checked the new location on Google.\n• I planned my travel early morning.\n• I reached one hour before time.\n• I found the room with the help of staff.\n• I gave my exam without stress.\n• I felt proud of my handling.\n• I learned to check updates daily.\n• I now double-check my exam info.\n• Acting fast helped me solve the issue.\n• That day taught me time management.\n• Now I keep all alerts and emails safe.\n• It showed me the power of being prepared.\n• Being early gave me peace of mind."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I volunteered at a college blood camp.\n• I helped in organizing the event.\n• My teacher said I was very active.\n• She said I showed good leadership.\n• I got a certificate of appreciation.\n• My parents were happy to hear that.\n• My friends clapped for me in class.\n• It gave me more energy to volunteer.\n• I joined more social events later.\n• Her feedback stayed in my heart.\n• I felt I could do even more.\n• Encouragement brings confidence to grow.\n• It showed me that small efforts are seen.\n• It pushed me to improve and lead.\n• That day made me believe in my abilities."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is MS Dhoni.\n• He is calm and cool in every match.\n• He leads the team with respect.\n• He thinks before taking action.\n• He supports young players in need.\n• He won many trophies for India.\n• He is simple and humble.\n• He never shows off his success.\n• He teaches to stay calm in pressure.\n• I want to learn his leadership style.\n• He is strong, smart, and silent.\n• He inspires me to be a better person.\n• I follow his story to learn life lessons.\n• He proves that calm mind brings success.\n• He is a legend both on and off the field."
+        }
+      ]
+    },
+    {
+      "setNo": 14,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I do not get angry when they are upset.\n• I stay quiet and listen to them.\n• I wait for them to finish speaking.\n• I show that I care about their feelings.\n• I ask calmly what made them angry.\n• I do not argue or blame them.\n• I speak in a soft and kind way.\n• If I did something wrong, I say sorry.\n• I try to solve the problem peacefully.\n• I give them space if needed.\n• Later, I talk again with love.\n• I try to keep our bond strong.\n• I remind them that I value our relationship.\n• I believe small talks can fix big fights.\n• Kindness always brings people closer again."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I tell my friend how tech helps daily.\n• We can talk to anyone anytime.\n• Online learning is possible now.\n• Hospitals use machines to save lives.\n• Farmers use technology to grow more.\n• Banking is easier with mobile apps.\n• Job updates come through websites.\n• Tech saves time and money.\n• It helps people work from home.\n• It gives fast updates and alerts.\n• I say to use it with care.\n• Tech is helpful if used properly.\n• It creates more chances to learn and earn.\n• It connects people from village to city.\n• It improves life when we use it responsibly."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to decide between dance practice and test.\n• Both were important to me.\n• I felt confused and worried.\n• I spoke to my teacher for help.\n• She said to focus on what matters more.\n• I chose to prepare for the test.\n• I studied hard for two days.\n• I did well in the exam.\n• After that, I joined the dance later.\n• I felt proud of my decision.\n• That moment taught me time management.\n• Choosing right helps in long run.\n• I understood how to set priorities.\n• Sometimes sacrifice gives better success.\n• It helped me stay focused and confident."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer came with a mobile app issue.\n• He was not able to login.\n• I asked for his user ID politely.\n• I guided him step-by-step.\n• I helped him reset the password.\n• I stayed with him till the end.\n• He was happy to log in again.\n• He thanked me with a smile.\n• I said I’m always here to help.\n• He appreciated my patience.\n• Solving problems gives me joy.\n• Customers should always feel supported.\n• My manager praised my service that day.\n• It made me more confident in my job.\n• Helping others is the best part of my role."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• I forgot my presentation file at home.\n• I realized it in the college bus.\n• I stayed calm and thought fast.\n• I called my brother to send it by email.\n• He sent it quickly to my teacher.\n• I downloaded and used it in class.\n• I gave my presentation on time.\n• Everyone liked my work.\n• I thanked my brother later.\n• I learned to double-check before leaving.\n• That day taught me quick problem solving.\n• Now I keep all files in email too.\n• It showed me the value of being prepared.\n• Planning ahead avoids last-minute stress.\n• That moment made me more responsible."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I participated in a group discussion.\n• I shared my ideas with confidence.\n• My teacher noticed my improvement.\n• She said I spoke clearly and nicely.\n• My friends also clapped for me.\n• I felt happy to hear those words.\n• It gave me motivation to try more.\n• I joined more group activities.\n• I started reading more to improve.\n• That feedback helped me grow.\n• It made me less shy in public.\n• Encouragement gave me self-belief.\n• Now I support others in speaking too.\n• I enjoy being part of discussions now.\n• It changed my fear into excitement."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is my school principal.\n• He is always disciplined and kind.\n• He listens to students with care.\n• He speaks simple but powerful words.\n• He solves problems without shouting.\n• He supports poor students with books.\n• He respects everyone equally.\n• He is always on time.\n• He works for the betterment of students.\n• I want to follow his example.\n• He is a real leader in my eyes.\n• He inspires me to live with purpose.\n• His actions teach more than his words.\n• He is loved by all students and teachers.\n• I wish to be as honest and helpful as him."
+        }
+      ]
+    },
+    {
+      "setNo": 15,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I stay calm when someone is angry.\n• I don’t shout back or fight.\n• I listen to what they say carefully.\n• I give them time to express feelings.\n• I don’t interrupt them while they talk.\n• I understand their reason for anger.\n• I speak gently without blaming.\n• I say sorry if it’s my mistake.\n• I offer to solve the problem together.\n• I give them space if they need it.\n• Later I check if they feel better.\n• I always try to keep relationships strong.\n• We sit and talk clearly after some time.\n• I remind them that I care about them.\n• This makes our bond more peaceful and strong."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I tell my friend that tech helps us daily.\n• It makes communication very easy.\n• Students learn from home using phones.\n• Doctors use machines to save lives.\n• Farmers use machines to grow food.\n• Online payments save time and travel.\n• Shopping can be done from home.\n• We get quick news and updates.\n• Tech helps in safety and emergencies.\n• Job offers and exams are online now.\n• I say using tech wisely is important.\n• It’s a tool that helps if used right.\n• It connects the world and saves effort.\n• It supports learning, work, and health.\n• It makes life easier and faster every day."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to decide between college and family event.\n• My exam and cousin’s marriage were on same day.\n• My family wanted me to attend the wedding.\n• I was confused and upset.\n• I thought about my future goals.\n• I spoke to my parents calmly.\n• They asked me to attend the exam.\n• I stayed home and prepared well.\n• I gave my exam and did well.\n• I joined the family after the exam.\n• Everyone understood my decision.\n• I felt proud and responsible.\n• It taught me to choose what’s right.\n• I learned that small sacrifices matter.\n• Now I plan better for such situations."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer came with an account issue.\n• He was unable to check his balance.\n• I greeted him with a smile.\n• I asked for his details politely.\n• I helped him use the ATM.\n• I explained each step slowly.\n• He got his balance receipt.\n• He felt happy and relaxed.\n• He thanked me again and again.\n• I said I'm always ready to help.\n• Helping customers makes me feel good.\n• Good service builds customer trust.\n• I always try to stay polite and clear.\n• Every customer should feel respected.\n• A happy customer is good for the bank."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• I forgot my ID card on exam day.\n• I felt scared and worried.\n• I spoke to the college office.\n• I showed other documents I had.\n• They allowed me with temporary slip.\n• I thanked them for understanding.\n• I wrote my exam without tension.\n• I learned to check everything before leaving.\n• Now I pack my bag the night before.\n• That day taught me to stay calm.\n• Problems can be solved with clear thinking.\n• I now help others who face such issues.\n• Now I keep spare documents too.\n• This experience made me more alert.\n• Planning ahead makes everything easier."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I helped decorate the college classroom.\n• It was for a small event.\n• I used simple ideas for decoration.\n• My teacher appreciated my work.\n• She said I had a creative mind.\n• I felt proud and happy inside.\n• My friends also said good things.\n• That feedback motivated me more.\n• I joined other activities later.\n• I felt confident to try new things.\n• Good words gave me courage.\n• I’ll always remember that day.\n• It showed me that efforts are noticed.\n• Positive words can change our thinking.\n• It pushed me to do better always."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is Abdul Kalam.\n• He was a great scientist and president.\n• He came from a poor background.\n• He studied hard to reach his goals.\n• He always supported students.\n• He said “dream big and work hard.”\n• He lived a simple and honest life.\n• He gave good speeches to youth.\n• He is loved by the whole country.\n• I read his books for motivation.\n• I want to follow his footsteps.\n• He inspires me to work hard and stay humble.\n• I want to spread knowledge like him.\n• He is a hero in the eyes of students.\n• He teaches us to be strong and kind."
+        }
+      ]
+    },
+    {
+      "setNo": 16,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I don’t speak when they are angry.\n• I stay calm and listen carefully.\n• I wait for the right time to reply.\n• I let them express their full emotions.\n• I do not judge or argue.\n• I speak in a soft and caring tone.\n• I say sorry if I did something wrong.\n• I try to understand their side.\n• I offer support and comfort.\n• I give them space if needed.\n• After they feel better, I talk again.\n• I always try to bring peace and understanding.\n• I never keep anger in my heart.\n• I want the person to feel respected.\n• Good communication can solve problems."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I say technology makes our life faster.\n• We can learn anytime using online apps.\n• Doctors use tech to treat patients quickly.\n• Farmers grow more food with machines.\n• We can send money using mobile apps.\n• Job searching is easy through websites.\n• People can work from home.\n• Tech helps in transport and GPS navigation.\n• We get alerts during natural disasters.\n• It saves paper by using digital forms.\n• I remind them to use tech safely.\n• Technology is a helpful gift for all.\n• It connects people across the world.\n• It supports education and business growth.\n• Tech brings comfort and new ideas."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to select between college project and family outing.\n• My family was excited about the trip.\n• My project deadline was near.\n• I thought deeply about both.\n• I explained the situation to my family.\n• They supported my decision.\n• I stayed back to finish my work.\n• I submitted the project on time.\n• I felt proud and responsible.\n• My teacher appreciated my hard work.\n• Later, I joined my family on a short trip.\n• It was a decision I will never regret.\n• I proved I can take mature decisions.\n• I learned to value time and work.\n• It made me more focused and strong."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer had trouble using a UPI app.\n• He did not understand how to scan the QR code.\n• I asked him to open his app.\n• I guided him step-by-step.\n• I helped him complete the payment.\n• I explained how to check the balance.\n• He smiled and thanked me for the help.\n• I gave him a printed receipt.\n• He felt more confident to use tech.\n• He appreciated my patience and kindness.\n• I told him we’re always here to help.\n• I was happy to solve his problem.\n• He said he will visit again because of my service.\n• It built trust between us.\n• I felt like I made a small difference."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• I lost my phone during a bus ride.\n• It had my class notes and schedules.\n• I informed the conductor quickly.\n• I used my friend’s phone to call mine.\n• A passenger had found it.\n• He gave it back to me safely.\n• I said thank you and felt very lucky.\n• I learned to be more careful with things.\n• Now I keep my phone in a zipped pocket.\n• I also back up my files online.\n• I acted calmly and got a solution.\n• That day taught me to stay alert.\n• I now plan for unexpected situations.\n• I share this experience with my friends.\n• Every problem has a way if we stay calm."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I cleaned and arranged books in the library.\n• It was not my duty, but I wanted to help.\n• My librarian saw and thanked me.\n• She told others about my good work.\n• I felt very happy and proud.\n• She said I had a helpful nature.\n• That feedback stayed in my heart.\n• I continued helping in free time.\n• My teachers also noticed my effort.\n• I became more confident in myself.\n• Simple appreciation gave me strength.\n• It made me a better student.\n• I started volunteering for more events.\n• I believe feedback can change a person.\n• It motivated me to always give my best."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is my mother.\n• She wakes up early and works all day.\n• She never complains, even when tired.\n• She takes care of the whole family.\n• She manages home and finances.\n• She teaches me to be honest.\n• She always supports my dreams.\n• She tells me to study hard.\n• She believes in prayers and peace.\n• She is simple, strong, and kind.\n• I want to be strong like her.\n• She is my first and best teacher.\n• She taught me how to be kind to others.\n• She always says, “Never give up.”\n• I follow her advice every day."
+        }
+      ]
+    },
+    {
+      "setNo": 17,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I try to stay cool and not get angry.\n• I listen to them without interrupting.\n• I let them express their feelings fully.\n• I speak only after they calm down.\n• I ask them what is making them upset.\n• I say sorry if I made any mistake.\n• I do not raise my voice.\n• I show that I care about their emotions.\n• I try to solve the issue with peace.\n• I give them time to relax if needed.\n• Later, we talk again and smile.\n• My goal is to make our bond stronger.\n• I believe kindness can heal any fight.\n• I never keep anger inside me.\n• I learn to be patient in every situation."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I explain that technology saves time.\n• Students learn from anywhere using mobiles.\n• Doctors treat patients faster with machines.\n• Farmers grow more food using tools.\n• Tech makes banking and shopping simple.\n• People work from home using laptops.\n• It helps in police and safety work.\n• News and weather come fast through apps.\n• Tech helps people with disabilities too.\n• We can pay bills easily online.\n• I say we must use it with care.\n• Technology is a great gift if used properly.\n• It makes life better and smarter.\n• It creates new jobs and ideas.\n• We just need to use it wisely every day."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to decide between two exam centers.\n• One was far but had better facilities.\n• The other was close but crowded.\n• I checked the travel and time needed.\n• I asked my teacher for advice.\n• I chose the far one for better focus.\n• I left home early to reach on time.\n• The exam hall was peaceful.\n• I completed my exam without stress.\n• I felt proud of my choice.\n• Good planning helped me succeed.\n• That decision gave me confidence.\n• I now believe in planning ahead.\n• I take every decision seriously.\n• That moment helped me grow stronger."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer could not find the account balance.\n• He was confused with the mobile app.\n• I asked him to open the app.\n• I guided him to the right option.\n• I showed him where to check balance.\n• I also helped him enable notifications.\n• He said it was very helpful.\n• He thanked me for being patient.\n• I felt happy to solve his problem.\n• I said I'm always there for support.\n• Helping customers builds trust.\n• I always try to explain things clearly.\n• He left with a smile on his face.\n• I love making banking easy for others.\n• Service with care makes a big difference."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• My pen stopped working during an exam.\n• I didn’t bring an extra pen that day.\n• I raised my hand to inform the teacher.\n• She gave me a spare pen quickly.\n• I continued writing without panic.\n• I completed the exam on time.\n• I thanked the teacher after the exam.\n• I now carry extra pens always.\n• I learned to prepare better.\n• Staying calm helped me solve the problem.\n• That day taught me to think fast.\n• Small mistakes can be corrected with action.\n• Every small lesson is important.\n• I now help others if they forget things.\n• A small act saved my whole exam."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I helped in college annual day program.\n• I managed seating and entry smoothly.\n• My teacher said I was very responsible.\n• She praised me during morning assembly.\n• My classmates clapped for me.\n• I felt proud and motivated.\n• I got a certificate for helping.\n• That feedback gave me more confidence.\n• I joined the next college event also.\n• I believed in myself more after that.\n• Encouragement pushed me forward.\n• It made me love teamwork and service.\n• I now take part in every event.\n• Positive words made me more active.\n• That day changed my attitude a lot."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is Bhagat Singh.\n• He was brave and fearless.\n• He fought for our country’s freedom.\n• He was young but full of courage.\n• He believed in justice and truth.\n• He inspired many youth of India.\n• He gave his life for the nation.\n• He wrote powerful messages to people.\n• His story gives me strength.\n• I want to serve my country like him.\n• I read about his life to stay motivated.\n• He is a true hero in my eyes.\n• His actions teach me to be bold.\n• He showed that age is not a limit.\n• I want to live with values like him."
+        }
+      ]
+    },
+    {
+      "setNo": 18,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I stay calm and silent at first.\n• I let them express everything freely.\n• I listen without stopping or judging.\n• I never shout or blame back.\n• I speak slowly and with respect.\n• I try to understand their point of view.\n• If I did something wrong, I accept it.\n• I say sorry with a kind heart.\n• I give them time and space if needed.\n• I ask how we can fix the issue.\n• I always choose peace, not fight.\n• I believe love solves every problem.\n• I stay patient till things are better.\n• I remember good moments we shared.\n• I keep the friendship more important than the fight."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I tell him tech makes life easy.\n• We can talk to anyone, anywhere.\n• Online learning helps students grow.\n• Doctors use machines to save lives.\n• Farmers use tech for better crops.\n• Shops work better with digital payment.\n• It helps in business and travel.\n• News and alerts reach fast to people.\n• Tech saves time and energy.\n• I tell him to use it wisely.\n• Technology brings growth and comfort.\n• If used well, tech is a big help.\n• It creates new jobs and industries.\n• It helps people stay safe and updated.\n• It connects people across the world."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between two jobs.\n• One had high pay but no growth.\n• The other had low pay but learning chances.\n• I spoke to my parents for advice.\n• I checked both job details carefully.\n• I thought about my long-term future.\n• I chose the one with more learning.\n• I worked hard and learned many skills.\n• After months, I got a better post.\n• It was a wise decision for my career.\n• I followed my goals, not just money.\n• I felt proud of that step.\n• I learned patience and planning.\n• That choice changed my whole path.\n• It gave me strong confidence in myself."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer’s cheque was rejected.\n• He came with a worried face.\n• I took his cheque and checked details.\n• I found a small signature mistake.\n• I explained it in simple words.\n• I told him to write a new cheque.\n• I helped him fill it correctly.\n• He thanked me for being clear.\n• He said my help saved his time.\n• I was happy to see him satisfied.\n• Clear service builds customer trust.\n• I always try to give my best.\n• I feel good when I reduce customer stress.\n• I treat all customers with equal care.\n• A happy customer gives good feedback."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• I forgot my password before an online test.\n• I couldn’t login and got scared.\n• I clicked the reset password option.\n• I used my email to create a new one.\n• I entered the test in last 5 minutes.\n• I stayed calm and wrote fast.\n• I finished just in time.\n• I scored good marks even after the issue.\n• I learned to keep passwords saved safely.\n• I also keep backups now.\n• Staying calm helped me think better.\n• Every problem has a solution.\n• Now I always check everything before class.\n• That day taught me how to handle stress.\n• I share this learning with my friends."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I hosted a small program in college.\n• It was my first time on stage.\n• I was nervous but gave my best.\n• My teacher said I was confident.\n• She appreciated my clear speaking.\n• My friends said I did well.\n• That feedback gave me more courage.\n• I felt proud and smiled all day.\n• I started taking more stage roles.\n• I improved my communication skills.\n• Small praise changed my thinking.\n• I now believe in my own ability.\n• I help other students become confident.\n• I feel happy when others clap for me.\n• It made me love public speaking."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is my father.\n• He works hard every single day.\n• He never gives up in tough times.\n• He supports the family with love.\n• He teaches me to be honest.\n• He is kind to all people.\n• He doesn’t waste time.\n• He tells me to study and stay humble.\n• He never complains, even when tired.\n• He motivates me with real-life stories.\n• I want to be like him one day.\n• He is my true hero in life.\n• I follow his advice every morning.\n• I see his smile as my strength.\n• He teaches by action, not just words."
+        }
+      ]
+    },
+    {
+      "setNo": 19,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I stay calm and listen carefully.\n• I don’t shout or argue with them.\n• I wait until they finish speaking.\n• I try to understand their pain.\n• I don’t take their words personally.\n• I say sorry if I made a mistake.\n• I speak kindly and softly.\n• I tell them I value our relationship.\n• I ask how I can help or improve.\n• I give them time to feel better.\n• Later, we talk again peacefully.\n• I believe care and respect solve issues.\n• I learn from every misunderstanding.\n• I never carry anger in my heart.\n• I focus on keeping our bond strong."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I say tech makes life more comfortable.\n• It helps in education and health care.\n• Students can study from home.\n• Doctors can do surgery with machines.\n• Farmers use tools to grow more.\n• Payments are fast with mobile apps.\n• We can work from home easily.\n• Job search is faster with technology.\n• We get fast news and weather updates.\n• Police and safety work use tech tools.\n• I tell my friend to use it carefully.\n• Tech is useful if used in the right way.\n• It connects people across the world.\n• It creates new job opportunities.\n• It helps solve many real-life problems."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between science and commerce.\n• I liked both subjects.\n• I asked my teachers for advice.\n• I wrote down my interests and goals.\n• I discussed it with my parents.\n• I finally chose commerce for my future plans.\n• It matched my dream to work in banking.\n• I started learning account basics.\n• I felt good about my decision.\n• I stayed focused and worked hard.\n• It was not easy but worth it.\n• That decision shaped my career path.\n• Now I enjoy studying finance subjects.\n• I believe in thinking before choosing.\n• That choice made me feel more responsible."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer forgot her ATM PIN.\n• She was nervous and didn’t know what to do.\n• I asked her to bring her ID.\n• I explained the steps to reset the PIN.\n• I helped her complete the form.\n• I guided her to the ATM for reset.\n• She got her new PIN successfully.\n• She thanked me with a smile.\n• She said I explained things clearly.\n• I was happy to assist her calmly.\n• I believe in helping with patience.\n• Good support keeps customers happy.\n• I treat every customer with respect.\n• I never make anyone feel embarrassed.\n• Helping others gives me job satisfaction."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• I had a health issue before exam day.\n• I had fever and body pain.\n• I didn’t want to miss the test.\n• I took medicine and rested.\n• I revised the important topics only.\n• I went to college with care.\n• I gave the exam without panic.\n• I finished on time and returned home.\n• I passed with good marks.\n• I learned to be strong in tough times.\n• I now take care of my health more.\n• That day made me more confident.\n• I don’t give up easily anymore.\n• I believe smart planning helps in problems.\n• That moment showed me my strength."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I participated in a drawing competition.\n• I drew a picture of nature.\n• My teacher said it was very neat.\n• She said I had talent in art.\n• My name was announced in class.\n• My parents were very happy.\n• I felt proud of my hard work.\n• I started drawing more regularly.\n• I shared my drawings with others.\n• Friends also gave me good feedback.\n• Positive words made me feel special.\n• I decided to improve my art skills.\n• I joined the college art club.\n• I plan to enter more competitions.\n• That feedback changed my mindset."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is Kiran Bedi.\n• She was India’s first woman IPS officer.\n• She is brave and strong.\n• She works for women’s safety.\n• She believes in discipline and honesty.\n• She speaks with power and truth.\n• She helps people in need.\n• I read about her work in school.\n• I want to be bold like her.\n• She inspires me to work for others.\n• She is a real leader and changemaker.\n• I admire her confidence and values.\n• I follow her speeches for motivation.\n• Her story gives me courage every day.\n• I dream to become an officer like her."
+        }
+      ]
+    },
+    {
+      "setNo": 20,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I first stay silent and calm.\n• I don’t talk when they are shouting.\n• I let them speak fully.\n• I listen to their side carefully.\n• I don’t get angry back.\n• I try to understand their feelings.\n• I say sorry if it’s my fault.\n• I ask how I can make it better.\n• I don’t blame or argue.\n• I give them some space if needed.\n• After they cool down, I talk again.\n• I always try to keep peace and respect.\n• I speak with care and patience.\n• I remind them that our bond is strong.\n• I learn from the issue to avoid it next time."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I explain that tech saves time.\n• Students learn easily with phones or laptops.\n• Doctors use tech to save lives.\n• Farmers grow more using machines.\n• We can pay bills online quickly.\n• Travel becomes simple with GPS maps.\n• News comes fast on our mobiles.\n• We can find jobs through the internet.\n• Tech helps in emergencies like disasters.\n• Shopping can be done from home.\n• I say tech is useful when used properly.\n• It helps people grow and stay connected.\n• It supports disabled people with special tools.\n• It improves communication across the world.\n• It makes daily tasks easy for everyone."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between part-time job and college.\n• My family needed extra money.\n• But I also wanted to finish my studies.\n• I felt confused and sad.\n• I made a list of options.\n• I spoke to my college mentor.\n• I chose to do evening part-time work.\n• I attended college in the morning.\n• It was not easy to manage both.\n• But I worked hard every day.\n• I learned time management and patience.\n• That decision helped my family and my future.\n• I gained experience and knowledge.\n• I proved I could handle pressure.\n• That time made me stronger."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer had an issue with online payment.\n• The money was deducted but order failed.\n• He was worried and needed help.\n• I took his order number and details.\n• I checked the system and confirmed the status.\n• I told him the refund will come in 3 days.\n• I explained the reason for failure.\n• He felt relaxed after my explanation.\n• He said I gave clear information.\n• I asked him to contact again if needed.\n• I believe in polite customer service.\n• Solving his problem made me feel proud.\n• I smiled and thanked him for his patience.\n• I made sure he got a follow-up message.\n• I treat every customer with equal care."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• I had a power cut before an online test.\n• My phone battery was low.\n• I didn’t waste time or panic.\n• I ran to my friend’s house nearby.\n• I used their internet and charger.\n• I joined the test 5 minutes late.\n• I informed my teacher quickly.\n• She allowed me to continue.\n• I completed the test on time.\n• I thanked my friend for support.\n• I learned to prepare backup options.\n• Quick thinking helped me that day.\n• I now charge my phone before exams.\n• I keep a list of nearby help options.\n• That day taught me to stay calm in pressure."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I helped organize a college quiz event.\n• I managed registration and seating.\n• Everything went smoothly with no problem.\n• My teacher praised me during the announcement.\n• She said I was hardworking and smart.\n• Everyone clapped and cheered for me.\n• I felt very proud inside.\n• That feedback gave me more confidence.\n• I started volunteering more.\n• I felt like I can handle responsibility.\n• Encouragement helped me grow faster.\n• I will always remember that day.\n• I now take part in group activities often.\n• I encourage my friends to try too.\n• It made me feel like a valuable student."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is S. Sundar Pichai.\n• He is the CEO of Google.\n• He came from a simple Indian family.\n• He studied hard and reached great heights.\n• He speaks politely and clearly.\n• He leads one of the biggest companies.\n• He is still humble and respectful.\n• He believes in education and hard work.\n• I want to become successful like him.\n• He teaches us to dream big.\n• I follow his journey for inspiration.\n• He proves anything is possible with effort.\n• I watch his interviews to learn more.\n• He motivates me to never give up.\n• I want to make my country proud like him."
+        }
+      ]
+    },
+    {
+      "setNo": 21,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I don’t react when they shout.\n• I keep quiet and let them talk.\n• I listen to their problem with care.\n• I don’t interrupt or argue.\n• I wait until they finish.\n• I stay calm and speak softly.\n• I try to understand their feelings.\n• I say sorry if I hurt them.\n• I ask what I can do now.\n• I try to solve it with love.\n• I give them space if needed.\n• I always keep our relationship strong.\n• I try to make them smile later.\n• I remember not to repeat the mistake.\n• I believe in solving with kindness."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I say tech helps in every part of life.\n• Students attend online classes.\n• Hospitals use modern machines for care.\n• Farmers use tools to grow better.\n• We pay bills in seconds.\n• We get job alerts through apps.\n• It helps people learn new skills.\n• News and weather come to mobile.\n• Tech helps us connect worldwide.\n• I tell my friend to use it safely.\n• If used right, it’s very useful.\n• Technology supports growth and success.\n• It saves time in daily work.\n• It helps old people with health tools.\n• Tech brings people closer every day."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between two career paths.\n• One was safe but not interesting.\n• The other was my dream but risky.\n• I asked my family and teachers.\n• I made a list of good and bad points.\n• I thought deeply about my future.\n• I followed my dream with courage.\n• I worked harder to succeed.\n• I learned many new things.\n• It gave me confidence and skills.\n• I believe I made the right choice.\n• That decision changed my life.\n• Now I feel proud of my journey.\n• I inspire my friends to follow their passion.\n• It made me believe in myself more."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer came with a password issue.\n• He forgot his login password.\n• I checked his account details.\n• I guided him through password reset steps.\n• I explained how to choose a strong password.\n• He successfully logged in again.\n• He was very thankful.\n• I told him how to keep it safe.\n• He appreciated my help and support.\n• I smiled and said happy to assist.\n• Helping others makes me feel good.\n• Customer service is about patience.\n• I always stay polite and clear.\n• I treat every customer with respect.\n• I feel proud when they leave happy."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• I missed my bus on exam day.\n• I didn’t panic or cry.\n• I called a local auto quickly.\n• I informed my teacher I may be late.\n• I reached just before the exam started.\n• I stayed calm and focused.\n• I wrote the exam with full effort.\n• I learned to plan better next time.\n• I now start early for important days.\n• That problem taught me a big lesson.\n• Quick action helped me succeed.\n• I feel proud of that moment.\n• I now keep emergency numbers saved.\n• I share this story to help others.\n• It taught me time is very important."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I helped organize a cultural event.\n• I managed lights and sound.\n• Everything worked smoothly.\n• My teacher called me hardworking.\n• She praised me in front of others.\n• I got a certificate of appreciation.\n• My classmates clapped for me.\n• I felt happy and proud.\n• I became more active after that.\n• Feedback gave me confidence.\n• I started enjoying team activities.\n• Encouragement helped me grow.\n• I now take more leadership roles.\n• I try to encourage others too.\n• That experience changed my mindset."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is my teacher.\n• She teaches with love and care.\n• She gives extra time to weak students.\n• She always comes on time.\n• She speaks softly and respectfully.\n• She motivates students daily.\n• She believes in discipline and kindness.\n• She shares life lessons with us.\n• She supports students beyond the classroom.\n• I want to be like her in future.\n• She inspires me to become a good person.\n• I feel lucky to learn from her.\n• She taught me to believe in myself.\n• Her smile makes class feel positive.\n• I will remember her lessons always."
+        }
+      ]
+    },
+    {
+      "setNo": 22,
+      "questions": [
+        {
+          "id": 1,
+          "question": "Handling an Angry Friend or Family Member",
+          "display": "• I stay silent and don’t react quickly.\n• I let them share everything fully.\n• I listen with full attention and respect.\n• I don’t argue or shout back.\n• I try to understand why they are upset.\n• I ask them how I can make it better.\n• I say sorry if it’s my fault.\n• I use kind and soft words.\n• I give them space if they need it.\n• Later I meet them again calmly.\n• I make sure we solve the problem.\n• I believe in love, not fights.\n• I try to learn from the situation.\n• I focus on keeping our friendship strong.\n• I forgive quickly and move on."
+        },
+        {
+          "id": 2,
+          "question": "How You Will Convince a Friend That Technology is Good for Humanity",
+          "display": "• I say tech helps in daily life.\n• We can do video calls with family.\n• We study online without going to class.\n• Hospitals use machines to treat better.\n• Farmers use tools to grow food fast.\n• We pay bills in one minute.\n• News and safety alerts come quickly.\n• People work from home using laptops.\n• Online classes improve knowledge.\n• I explain how it saves time.\n• I say use tech in the right way.\n• Tech is good if used with care.\n• It helps during emergencies like floods.\n• It gives jobs to many skilled people.\n• It connects people across the world."
+        },
+        {
+          "id": 3,
+          "question": "A Difficult Decision I Had to Make",
+          "display": "• I had to choose between two colleges.\n• One was near but had fewer courses.\n• The other was far with good teaching.\n• I discussed it with my parents.\n• I thought about travel and cost.\n• I made a list of pros and cons.\n• I chose the far one for better learning.\n• I planned my budget and routine.\n• I worked hard in that college.\n• Now I am proud of my choice.\n• It made me confident and mature.\n• That decision helped me grow.\n• I believe I chose what was right for me.\n• It taught me to take bold steps.\n• I encourage others to think for the future."
+        },
+        {
+          "id": 4,
+          "question": "Assisting a Customer with a Problem",
+          "display": "• A customer wanted to close an account.\n• He didn’t know the steps clearly.\n• I welcomed him and asked for details.\n• I explained the full closing process.\n• I helped him fill out the form.\n• I collected the required documents.\n• I submitted it for further action.\n• I told him when the process would finish.\n• He thanked me for my clear help.\n• He was happy with the support.\n• I smiled and said it’s my duty.\n• Helping people gives me happiness.\n• I always try to stay polite and calm.\n• I cleared all his doubts with care.\n• He said he would come again if needed."
+        },
+        {
+          "id": 5,
+          "question": "A Time You Faced and Solved a Problem",
+          "display": "• I had no internet during an online test.\n• I stayed calm and didn’t panic.\n• I restarted my mobile data quickly.\n• The network was still weak.\n• I went to my neighbor’s house.\n• I asked politely to use their Wi-Fi.\n• They allowed and I joined the test.\n• I completed it in time.\n• I thanked them for their help.\n• I learned to stay calm in problems.\n• Now I always check internet before test.\n• It taught me how to act fast.\n• I keep backup options ready now.\n• I told my friends to prepare too.\n• It made me more responsible."
+        },
+        {
+          "id": 6,
+          "question": "Receiving Encouraging Feedback from College or Workplace",
+          "display": "• I cleaned the class before teachers came.\n• I did it without anyone asking.\n• My class teacher noticed my work.\n• She thanked me in front of others.\n• She said I showed leadership.\n• I felt proud and smiled.\n• My friends also appreciated me.\n• I felt good about my values.\n• I started helping more in college.\n• Her feedback gave me confidence.\n• Small praise made a big change.\n• It encouraged me to do more good.\n• I realized small acts matter a lot.\n• I felt more connected with my college.\n• I now enjoy doing extra duties."
+        },
+        {
+          "id": 7,
+          "question": "Who is Your Role Model?",
+          "display": "• My role model is Neeraj Chopra.\n• He won gold medal for India.\n• He is very disciplined and focused.\n• He trained hard to reach his dream.\n• He stayed simple even after success.\n• He made India proud with javelin throw.\n• He is humble and always smiling.\n• He teaches youth to believe in self.\n• I follow his story for motivation.\n• I want to work hard like him.\n• He shows that nothing is impossible.\n• He is a real champion in life.\n• He reminds us to stay humble.\n• I keep his picture for daily inspiration.\n• I wish to meet him one day."
+        }
+      ]
+    }
+  ]
+}

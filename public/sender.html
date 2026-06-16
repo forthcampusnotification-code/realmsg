@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RealMsg · Sender</title>
+<script src="/socket.io/socket.io.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Variables ─────────────────────────────────────────────── */
+:root {
+  --bg:    #070710;
+  --s1:    #0c0c1a;
+  --s2:    #10101f;
+  --bdr:   #1a1a30;
+  --bdr2:  #22223a;
+  --acc:   #4d7cfe;
+  --acc-g: rgba(77,124,254,.12);
+  --grn:   #00e0a0;
+  --grn-g: rgba(0,224,160,.1);
+  --red:   #ff4060;
+  --ylw:   #f5c518;
+  --txt:   #e0e4ff;
+  --sub:   #555880;
+  --dim:   #2a2d50;
+  --mono:  'IBM Plex Mono', monospace;
+  --head:  'Syne', sans-serif;
+  --r:     10px;
+  --panel-bg: var(--s1);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 14px; }
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  background-image:
+    linear-gradient(rgba(77,124,254,.022) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77,124,254,.022) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--txt);
+  font-family: var(--mono);
+}
+
+/* ── Layout ──────────────────────────────────────────────────────── */
+.shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── Header ──────────────────────────────────────────────────────── */
+.hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 4px;
+}
+.logo {
+  font-family: var(--head);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+.logo .a { color: var(--acc); }
+.logo .b { color: var(--grn); }
+.logo-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--sub);
+  letter-spacing: 1.5px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.conn-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--s1);
+  border: 1px solid var(--bdr2);
+  border-radius: 99px;
+  padding: 5px 13px;
+  font-size: 11px;
+  color: var(--sub);
+  letter-spacing: .3px;
+  white-space: nowrap;
+}
+.dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--dim);
+  flex-shrink: 0;
+  transition: all .3s;
+}
+.dot.on  { background: var(--grn); box-shadow: 0 0 0 3px var(--grn-g); }
+.dot.off { background: var(--red); }
+
+/* ── Panel ───────────────────────────────────────────────────────── */
+.panel {
+  background: var(--s1);
+  border: 1px solid var(--bdr);
+  border-radius: var(--r);
+  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(77,124,254,.25), transparent);
+  pointer-events: none;
+}
+.panel-label {
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--sub);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.panel-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--bdr);
+}
+
+/* ── Inputs ──────────────────────────────────────────────────────── */
+.field-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+input, textarea {
+  width: 100%;
+  background: var(--s2);
+  border: 1px solid var(--bdr2);
+  border-radius: 8px;
+  color: var(--txt);
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 10px 13px;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+input:focus, textarea:focus {
+  border-color: var(--acc);
+  box-shadow: 0 0 0 3px var(--acc-g);
+}
+input::placeholder, textarea::placeholder { color: var(--dim); }
+
+/* Full-width message textarea */
+#msg {
+  width: 100%;
+  resize: vertical;
+  min-height: 88px;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────── */
+.btn {
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--head);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 20px;
+  transition: all .15s;
+  white-space: nowrap;
+  letter-spacing: .2px;
+  line-height: 1;
+}
+.btn:active { transform: scale(.96); }
+.btn:disabled { opacity: .3; cursor: not-allowed; transform: none; }
+.btn-pri { background: var(--acc); color: #fff; box-shadow: 0 4px 14px var(--acc-g); }
+.btn-pri:hover:not(:disabled) { filter: brightness(1.1); }
+.btn-sec { background: var(--s2); border: 1px solid var(--bdr2); color: var(--sub); }
+.btn-sec:hover { border-color: var(--acc); color: var(--acc); }
+.btn-dan { background: transparent; border: 1px solid rgba(255,64,96,.35); color: var(--red); }
+.btn-dan:hover { background: rgba(255,64,96,.08); border-color: var(--red); }
+.btn-sm { padding: 7px 12px; font-size: 12px; }
+
+/* ── Auth panel ──────────────────────────────────────────────────── */
+.auth-row {
+  display: flex;
+  gap: 8px;
+  align-items: stretch;
+}
+.auth-row input { flex: 1; margin: 0; }
+.auth-btns {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* ── Room bar (shown when joined) ────────────────────────────────── */
+.room-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--s2);
+  border: 1px solid var(--bdr2);
+  border-radius: 8px;
+  padding: 10px 13px;
+  margin-bottom: 14px;
+}
+.room-code {
+  font-family: var(--head);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--acc);
+}
+.room-meta { font-size: 10px; color: var(--sub); }
+.room-actions { margin-left: auto; display: flex; gap: 8px; }
+
+/* ── Compose area ────────────────────────────────────────────────── */
+.compose-area {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.compose-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.compose-actions .btn-pri { flex: 1; padding: 11px 20px; font-size: 14px; }
+.char-count {
+  font-size: 10px;
+  color: var(--dim);
+  text-align: right;
+  margin-top: -4px;
+}
+
+/* ── Status ──────────────────────────────────────────────────────── */
+.status {
+  min-height: 18px;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: .3px;
+}
+.status.ok   { color: var(--grn); }
+.status.err  { color: var(--red); }
+.status.info { color: var(--acc); }
+
+/* ── Quick templates ─────────────────────────────────────────────── */
+.tpls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.tpl {
+  background: var(--s2);
+  border: 1px solid var(--bdr2);
+  border-radius: 6px;
+  padding: 5px 11px;
+  font-size: 12px;
+  color: var(--sub);
+  cursor: pointer;
+  font-family: var(--mono);
+  transition: all .15s;
+}
+.tpl:hover { border-color: var(--grn); color: var(--grn); }
+.tpl:active { transform: scale(.95); }
+
+/* ── Question Set Selector ───────────────────────────────────────── */
+.set-scroll-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 4px;
+  /* hide scrollbar but keep functionality */
+  scrollbar-width: thin;
+  scrollbar-color: var(--bdr2) transparent;
+}
+.set-scroll-wrap::-webkit-scrollbar { height: 4px; }
+.set-scroll-wrap::-webkit-scrollbar-track { background: transparent; }
+.set-scroll-wrap::-webkit-scrollbar-thumb { background: var(--bdr2); border-radius: 4px; }
+
+.set-buttons {
+  display: flex;
+  gap: 6px;
+  min-width: max-content;
+  padding: 2px 1px;
+}
+.set-btn {
+  background: var(--s2);
+  border: 1px solid var(--bdr2);
+  border-radius: 7px;
+  color: var(--sub);
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  transition: all .15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.set-btn:hover { border-color: var(--acc); color: var(--acc); }
+.set-btn.active {
+  background: var(--acc);
+  border-color: var(--acc);
+  color: #fff;
+  box-shadow: 0 2px 8px var(--acc-g);
+}
+
+/* ── Questions Panel ─────────────────────────────────────────────── */
+.q-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.q-item {
+  background: var(--s2);
+  border: 1px solid var(--bdr2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: all .15s;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.q-item:hover {
+  border-color: var(--acc);
+  background: rgba(77,124,254,.06);
+}
+.q-item:active { transform: scale(.99); }
+.q-num {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--acc);
+  letter-spacing: .5px;
+  margin-top: 1px;
+  flex-shrink: 0;
+  width: 16px;
+}
+.q-text {
+  font-size: 13px;
+  color: var(--txt);
+  line-height: 1.5;
+  flex: 1;
+}
+.q-empty {
+  text-align: center;
+  color: var(--sub);
+  font-size: 12px;
+  padding: 20px 0;
+  font-style: italic;
+}
+
+/* ── Loading skeleton ────────────────────────────────────────────── */
+.skeleton {
+  background: linear-gradient(90deg, var(--s2) 25%, var(--bdr2) 50%, var(--s2) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+  border-radius: 6px;
+  height: 38px;
+}
+@keyframes shimmer { 0%{background-position:200%} 100%{background-position:-200%} }
+
+/* ── Signal buttons ──────────────────────────────────────────────── */
+.signal-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.sig-btn {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: var(--head);
+  font-weight: 800;
+  font-size: 14px;
+  padding: 13px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all .15s;
+  letter-spacing: .3px;
+}
+.sig-btn:active { transform: scale(.97); }
+.sig-go {
+  background: linear-gradient(135deg, #00c853, #00e676);
+  color: #003300;
+  box-shadow: 0 4px 18px rgba(0,200,83,.35);
+}
+.sig-go:hover { filter: brightness(1.08); box-shadow: 0 6px 24px rgba(0,200,83,.5); }
+.sig-stop {
+  background: linear-gradient(135deg, #d50000, #ff1744);
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(213,0,0,.35);
+}
+.sig-stop:hover { filter: brightness(1.08); box-shadow: 0 6px 24px rgba(213,0,0,.5); }
+.sig-circle {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.sig-go   .sig-circle { background: #003300; opacity: .5; }
+.sig-stop .sig-circle { background: #fff; opacity: .6; }
+
+/* ── Sections ────────────────────────────────────────────────────── */
+#auth-section  {}
+#main-section  { display: none; }
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 500px) {
+  .shell { padding: 16px 14px 60px; gap: 10px; }
+  .auth-row { flex-direction: column; }
+  .room-actions { flex-wrap: wrap; }
+  .compose-actions .btn-pri { font-size: 13px; }
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- ── Header ── -->
+  <div class="hdr">
+    <div class="logo">
+      <span class="a">Real</span><span class="b">Msg</span>
+      <span class="logo-tag">SENDER</span>
+    </div>
+    <div class="conn-pill">
+      <div class="dot" id="dot"></div>
+      <span id="clbl">Connecting…</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       AUTH SECTION — shown before joining a room
+       ══════════════════════════════════════════════════════════ -->
+  <div class="panel" id="auth-section">
+    <div class="panel-label">Join Room</div>
+    <div class="auth-row">
+      <input id="iroom"
+             placeholder="Room code  e.g. FC123"
+             maxlength="10"
+             autocomplete="off"
+             spellcheck="false"
+             oninput="this.value=this.value.toUpperCase().replace(/[^A-Z0-9]/g,'')">
+    </div>
+    <div class="auth-btns">
+      <button class="btn btn-pri" onclick="joinRoom()">Join Room →</button>
+    </div>
+    <div class="status" id="auth-status" style="margin-top:10px"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MAIN SECTION — shown after joining
+       ══════════════════════════════════════════════════════════ -->
+  <div id="main-section">
+
+    <!-- 1. Question Set Selector -->
+    <div class="panel" id="set-panel">
+      <div class="panel-label">Question Sets</div>
+      <div class="set-scroll-wrap">
+        <div class="set-buttons" id="set-buttons">
+          <!-- populated by JS after JSON loads -->
+          <div class="skeleton" style="width:60px"></div>
+          <div class="skeleton" style="width:60px"></div>
+          <div class="skeleton" style="width:60px"></div>
+          <div class="skeleton" style="width:60px"></div>
+          <div class="skeleton" style="width:60px"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Questions for selected set -->
+    <div class="panel" id="q-panel">
+      <div class="panel-label">Questions — <span id="q-set-label">select a set above</span></div>
+      <div class="q-list" id="q-list">
+        <div class="q-empty">← Select a question set to load questions</div>
+      </div>
+    </div>
+
+    <!-- 3. Room bar + Compose -->
+    <div class="panel">
+      <div class="panel-label">Compose & Send</div>
+
+      <!-- Signal buttons: GO / STOP -->
+      <div class="signal-row">
+        <button class="sig-btn sig-go"   onclick="sendSignal('go')">
+          <div class="sig-circle"></div>
+          GO — Start Reading
+        </button>
+        <button class="sig-btn sig-stop" onclick="sendSignal('stop')">
+          <div class="sig-circle"></div>
+          STOP — Stop Reading
+        </button>
+      </div>
+
+      <!-- Room bar -->
+      <div class="room-bar">
+        <div>
+          <div class="room-meta">ROOM</div>
+          <div class="room-code" id="active-room">—</div>
+        </div>
+        <div class="room-actions">
+          <button class="btn btn-dan btn-sm" onclick="clearRoom()">Clear Screen</button>
+          <button class="btn btn-sec btn-sm" onclick="leaveRoom()">Leave</button>
+        </div>
+      </div>
+
+      <!-- Message textarea (full width) -->
+      <div class="compose-area">
+        <textarea
+          id="msg"
+          placeholder="Click a question above to load it here, or type a custom message…&#10;Enter = send   ·   Shift+Enter = new line"
+          maxlength="1000"
+        ></textarea>
+        <div class="char-count"><span id="cn">0</span> / 1000</div>
+
+        <!-- Send + Clear buttons -->
+        <div class="compose-actions">
+          <button class="btn btn-pri" id="sbtn" onclick="doSend()">Send ▶</button>
+          <button class="btn btn-sec btn-sm" onclick="clrTxt()">Clear</button>
+        </div>
+
+        <!-- Quick templates -->
+        <div class="tpls" id="tpls"></div>
+
+        <div class="status" id="send-status"></div>
+      </div>
+    </div>
+
+  </div><!-- /main-section -->
+</div><!-- /shell -->
+
+<script>
+/* ═══════════════════════════════════════════════════════════════════
+   RealMsg — Sender
+   Socket.IO connection is UNCHANGED from the working deployment.
+   New: question sets loaded from /data/question-sets.json
+   ═══════════════════════════════════════════════════════════════════ */
+
+// ── Quick-send templates ──────────────────────────────────────────
+const TMPLS = [
+  '✅ Correct!', '❌ Wrong answer', '⏳ Please wait…',
+  '👀 Look here', '🔁 Repeat question', '📌 Note this',
+  '⚡ Next question', '🛑 Stop', '💡 Hint coming',
+];
+
+// ── State ─────────────────────────────────────────────────────────
+const socket = io({ autoConnect: true, reconnectionDelay: 500, reconnectionAttempts: Infinity });
+let room = '', busy = false;
+let questionSets = [];   // loaded from JSON
+let activeSetNo = null;  // currently selected set number
+
+// ── Pre-fill room from URL ────────────────────────────────────────
+const qp = new URLSearchParams(location.search);
+if (qp.get('room')) document.getElementById('iroom').value = qp.get('room').toUpperCase();
+
+// ── Build quick-send template buttons ────────────────────────────
+const tplContainer = document.getElementById('tpls');
+TMPLS.forEach(t => {
+  const b = document.createElement('button');
+  b.className = 'tpl';
+  b.textContent = t;
+  b.onclick = () => { setMsg(t); doSend(); };
+  tplContainer.appendChild(b);
+});
+
+// ── Char counter ──────────────────────────────────────────────────
+document.getElementById('msg').addEventListener('input', function () {
+  document.getElementById('cn').textContent = this.value.length;
+});
+
+// ── Enter to send (Shift+Enter = newline) ─────────────────────────
+document.getElementById('msg').addEventListener('keydown', e => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); doSend(); }
+});
+
+// ── Socket events (DO NOT MODIFY — same as working deployment) ────
+socket.on('connect',       () => setDot(true,  'Connected'));
+socket.on('disconnect',    () => setDot(false, 'Reconnecting…'));
+socket.on('connect_error', () => setDot(false, 'Reconnecting…'));
+
+// ── Load question sets from JSON ──────────────────────────────────
+async function loadQuestionSets() {
+  try {
+    const res  = await fetch('/data/question-sets.json?v=' + Date.now());
+    const data = await res.json();
+    questionSets = data.sets || [];
+    renderSetButtons();
+  } catch (err) {
+    console.error('Failed to load question sets:', err);
+    document.getElementById('set-buttons').innerHTML =
+      '<span style="color:var(--red);font-size:12px">Failed to load question sets</span>';
+  }
+}
+
+// ── Render set selector buttons ───────────────────────────────────
+function renderSetButtons() {
+  const container = document.getElementById('set-buttons');
+  container.innerHTML = '';
+  questionSets.forEach(set => {
+    const b = document.createElement('button');
+    b.className = 'set-btn';
+    b.textContent = 'Set ' + set.setNo;
+    b.dataset.setNo = set.setNo;
+    b.onclick = () => selectSet(set.setNo);
+    container.appendChild(b);
+  });
+}
+
+// ── Select a set and display its questions ────────────────────────
+function selectSet(setNo) {
+  activeSetNo = setNo;
+
+  // Update button active states
+  document.querySelectorAll('.set-btn').forEach(b => {
+    b.classList.toggle('active', parseInt(b.dataset.setNo) === setNo);
+  });
+
+  // Find the set
+  const set = questionSets.find(s => s.setNo === setNo);
+  document.getElementById('q-set-label').textContent = 'Set ' + setNo;
+
+  const list = document.getElementById('q-list');
+  list.innerHTML = '';
+
+  if (!set || !set.questions.length) {
+    list.innerHTML = '<div class="q-empty">No questions in this set.</div>';
+    return;
+  }
+
+  set.questions.forEach(q => {
+    const item = document.createElement('div');
+    item.className = 'q-item';
+    item.innerHTML = `
+      <div class="q-num">Q${q.id}</div>
+      <div class="q-text">${escHtml(q.question)}</div>
+    `;
+    item.onclick = () => {
+      // Load the full display text (title + bullet points) into textarea
+      // so the candidate sees the complete answer on the receiver screen
+      const sendText = q.display || q.question;
+      setMsg(sendText);
+      // Scroll to compose area smoothly
+      document.getElementById('msg').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      document.getElementById('msg').focus();
+    };
+    list.appendChild(item);
+  });
+}
+
+// ── Room join / leave ─────────────────────────────────────────────
+window.joinRoom = function () {
+  const r = document.getElementById('iroom').value.trim().toUpperCase();
+  if (!r) { showStatus('auth-status', 'Enter a room code', 'err'); return; }
+  room = r;
+  socket.emit('join-room', { room });
+
+  document.getElementById('active-room').textContent = room;
+  document.getElementById('auth-section').style.display = 'none';
+  document.getElementById('main-section').style.display = 'block';
+  history.replaceState(null, '', '/sender?room=' + room);
+  document.getElementById('msg').focus();
+
+  // Load question sets when entering room
+  loadQuestionSets();
+};
+
+// Allow Enter key on room input
+document.getElementById('iroom').addEventListener('keydown', e => {
+  if (e.key === 'Enter') window.joinRoom();
+});
+
+window.leaveRoom = function () {
+  room = '';
+  document.getElementById('auth-section').style.display = 'block';
+  document.getElementById('main-section').style.display = 'none';
+  document.getElementById('iroom').value = '';
+  history.replaceState(null, '', '/sender');
+};
+
+window.clrTxt = function () {
+  setMsg('');
+};
+
+window.clearRoom = function () {
+  if (!room || !confirm('Clear the receiver screen?')) return;
+  socket.emit('clear-room', { room });
+  showStatus('send-status', '🗑 Screen cleared', 'ok');
+  setTimeout(() => document.getElementById('send-status').textContent = '', 2000);
+};
+
+// ── Signal: GO / STOP ────────────────────────────────────────────
+window.sendSignal = function (type) {
+  if (!room) return;
+  socket.emit('signal', { room, type }); // 'go' or 'stop'
+  const label = type === 'go' ? '🟢 GO signal sent' : '🔴 STOP signal sent';
+  showStatus('send-status', label, type === 'go' ? 'ok' : 'err');
+  setTimeout(() => document.getElementById('send-status').textContent = '', 2000);
+};
+
+// ── Send message ──────────────────────────────────────────────────
+window.doSend = function () {
+  if (busy || !room) return;
+  const txt = document.getElementById('msg').value.trim();
+  if (!txt) return;
+
+  busy = true;
+  document.getElementById('sbtn').disabled = true;
+
+  // Emit via Socket.IO — same event as working deployment
+  socket.emit('send-message', { room, text: txt });
+
+  setMsg('');
+  showStatus('send-status', '✅ Sent', 'ok');
+
+  setTimeout(() => {
+    busy = false;
+    document.getElementById('sbtn').disabled = false;
+    document.getElementById('send-status').textContent = '';
+  }, 500);
+};
+
+// ── Helpers ───────────────────────────────────────────────────────
+function setMsg(text) {
+  const ta = document.getElementById('msg');
+  ta.value = text;
+  document.getElementById('cn').textContent = text.length;
+}
+
+function setDot(ok, label) {
+  document.getElementById('dot').className = 'dot ' + (ok ? 'on' : 'off');
+  document.getElementById('clbl').textContent = label;
+}
+
+function showStatus(id, msg, cls) {
+  const el = document.getElementById(id);
+  el.textContent = msg;
+  el.className = 'status ' + cls;
+}
+
+function escHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+</script>
+</body>
+</html>
